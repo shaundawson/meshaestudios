@@ -1,0 +1,93 @@
+:root {
+    --dark1: #2a2a2a;
+    --orange1: #cc5500;
+    --gray: #6b6b6b;
+    --pale: #fafafa;
+}
+
+.pageContainer::before {
+    content: '';
+    position: fixed;
+    left: 0;
+    top: 70px;
+    width: calc(20vw - 1vw);
+    height: 20px;
+    background: var(--dark1);
+    z-index: 10;
+    transform-origin: left center;
+    animation: slideInBlock 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes slideInBlock {
+    from {
+        transform: scaleX(0);
+        opacity: 0;
+    }
+
+    to {
+        transform: scaleX(1);
+        opacity: 1;
+    }
+}
+
+.pageContainer {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.bgImage {
+    position: fixed;
+    top: 0;
+    left: 6vw;
+    z-index: -2;
+    width: 100vw;
+    height: 100vh;
+    background: url('../assets/HomePageBGImage.svg') center center no-repeat;
+    background-size: 30vw;
+    pointer-events: none;
+}
+
+@media (max-width: 820px) and (min-width: 601px) {
+    .pageContainer::before {
+        top: 60px;
+        width: calc(8vw - 1vw);
+        height: 14px;
+    }
+
+    .bgImage {
+        background-size: 45vw;
+        left: 8vw;
+    }
+}
+
+@media (max-width: 600px) {
+    .pageContainer::before {
+        top: 50px;
+        width: calc(10vw - 2vw);
+        height: 10px;
+    }
+
+    .bgImage {
+        background-size: 65vw;
+        left: 10vw;
+    }
+}
+
+@media (max-width: 390px) {
+    .pageContainer::before {
+        top: 45px;
+        width: calc(10vw - 2vw);
+        height: 8px;
+    }
+
+    .bgImage {
+        background-size: 70vw;
+        left: 10vw;
+    }
+}

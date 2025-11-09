@@ -1,0 +1,270 @@
+:root {
+    --dark1: #2a2a2a;
+    --orange1: #cc5500;
+    --gray: #6b6b6b;
+    --pale: #fafafa;
+}
+
+html,
+body {
+    height: auto !important;
+    min-height: 100vh !important;
+    overflow-x: hidden !important;
+    margin: 0;
+    padding: 0;
+}
+
+.galleryBG {
+    background: var(--dark1);
+    min-height: 100vh;
+    width: 100%;
+    margin: 0;
+    padding: 12vh 0 120px 0;
+    box-sizing: border-box;
+}
+
+.masonryGallery {
+    max-width: 80vw;
+    margin: 0 auto;
+    padding: 0 24px;
+    column-count: 4;
+    column-gap: 24px;
+}
+
+@media (max-width: 1100px) {
+    .masonryGallery {
+        column-count: 2;
+        column-gap: 20px;
+    }
+}
+
+@media (max-width: 700px) {
+    .masonryGallery {
+        column-count: 1;
+        padding: 0 12px;
+    }
+}
+
+.masonryCard {
+    background: linear-gradient(135deg, rgba(50, 40, 30, 0.50) 0%, rgba(30, 25, 20, 0.60) 100%);
+    backdrop-filter: blur(8px);
+    border-radius: 0;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    border: none;
+    border-right: 1px solid rgba(204, 85, 0, 0.3);
+    margin-bottom: 24px;
+    display: inline-block;
+    width: 100%;
+    vertical-align: top;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.masonryCard:hover {
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+    border-right: 1px solid rgba(204, 85, 0, 0.6);
+    transform: translateY(-2px);
+}
+
+.cardImage {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+    aspect-ratio: var(--aspect, 1/1);
+    background: #1a1a1a;
+    opacity: 0.95;
+    transition: opacity 0.3s ease;
+}
+
+.masonryCard:hover .cardImage {
+    opacity: 1;
+}
+
+.cardBody {
+    padding: 20px 20px 18px 20px;
+    background: rgba(20, 20, 20, 0.5);
+}
+
+.cardTitle {
+    font-family: 'Akzidenz-Grotesk', Arial, Helvetica, sans-serif;
+    font-weight: 300;
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+    color: var(--pale);
+    letter-spacing: -0.015em;
+    line-height: 1.2;
+}
+
+.cardDescription {
+    color: var(--pale);
+    font-size: 0.85rem;
+    line-height: 1.5;
+    font-weight: 300;
+    opacity: 0.85;
+    letter-spacing: 0;
+}
+
+.modalOverlay {
+    position: fixed;
+    z-index: 2000;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(20, 20, 20, 0.92);
+    backdrop-filter: blur(12px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 0.25s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.modalContent {
+    background: transparent;
+    border-radius: 0;
+    box-shadow: none;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 94vw;
+    max-height: 90vh;
+    position: relative;
+}
+
+.modalFullImage {
+    display: block;
+    max-width: 85vw;
+    max-height: 75vh;
+    border-radius: 0;
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.6);
+    margin-bottom: 32px;
+    border-right: 2px solid rgba(204, 85, 0, 0.4);
+}
+
+.modalCaption {
+    color: var(--pale);
+    text-align: left;
+    font-family: 'Akzidenz-Grotesk', Arial, Helvetica, sans-serif;
+    padding: 0;
+    text-shadow: none;
+    letter-spacing: -0.015em;
+    max-width: 85vw;
+    width: 100%;
+}
+
+.modalCaption .cardTitle {
+    color: var(--pale);
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-bottom: 10px;
+    text-shadow: none;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+}
+
+.modalCaption .cardDescription {
+    color: var(--pale);
+    font-size: 1rem;
+    font-weight: 300;
+    text-shadow: none;
+    opacity: 0.9;
+    line-height: 1.6;
+}
+
+.modalActions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 24px;
+    margin-bottom: 8px;
+    position: relative;
+    max-width: 85vw;
+    width: 100%;
+    padding: 0;
+}
+
+.closePill,
+.sharePill {
+    background: transparent;
+    color: var(--pale);
+    border: 1px solid rgba(250, 250, 250, 0.3);
+    font-size: 0.75rem;
+    font-weight: 500;
+    padding: 0.7em 2em;
+    border-radius: 0;
+    box-shadow: none;
+    letter-spacing: 0;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    outline: none;
+    font-family: 'Akzidenz-Grotesk', Arial, Helvetica, sans-serif;
+    text-transform: lowercase;
+}
+
+.sharePill {
+    background: var(--orange1);
+    color: var(--pale);
+    border: none;
+}
+
+.closePill:hover,
+.closePill:focus {
+    background: rgba(250, 250, 250, 0.1);
+    border-color: var(--pale);
+}
+
+.sharePill:hover,
+.sharePill:focus {
+    background: var(--pale);
+    color: var(--dark1);
+}
+
+@media (max-width: 768px) {
+    .masonryCard {
+        margin-bottom: 20px;
+    }
+
+    .cardBody {
+        padding: 16px;
+    }
+
+    .cardTitle {
+        font-size: 1rem;
+    }
+
+    .cardDescription {
+        font-size: 0.82rem;
+    }
+
+    .modalFullImage {
+        max-width: 92vw;
+        max-height: 65vh;
+    }
+
+    .modalCaption {
+        max-width: 92vw;
+    }
+
+    .modalCaption .cardTitle {
+        font-size: 1.3rem;
+    }
+
+    .modalCaption .cardDescription {
+        font-size: 0.95rem;
+    }
+
+    .modalActions {
+        max-width: 92vw;
+    }
+}

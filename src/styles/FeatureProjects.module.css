@@ -1,0 +1,657 @@
+:root {
+    --dark1: #232323;
+    --orange1: #cc5500;
+    --gray: #6b6b6b;
+    --pale: #f9f9f9;
+}
+
+.contentWrapper {
+    position: relative;
+    z-index: 2;
+}
+
+.bgWrapper {
+    min-height: 100vh;
+    min-width: 100vw;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    inset: 0;
+    z-index: -2;
+    background: var(--pale);
+    pointer-events: none;
+    transition: background 0.5s ease;
+}
+
+.bgSection {
+    min-height: 100vh;
+    width: 100vw;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 6vh 0;
+}
+
+.aboutGrid {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 22vw;
+    padding-right: 8vw;
+    position: relative;
+}
+
+.aboutOverlay {
+    right: 7vw;
+    bottom: auto;
+    top: 50%;
+    width: 65vw;
+    max-height: 100vh;
+    background: linear-gradient(135deg, rgba(60, 40, 20, 0.55) 0%, rgba(30, 20, 10, 0.85) 100%);
+    padding: 1vw 2vw;
+    border-radius: 0.24em;
+    color: var(--pale);
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    z-index: 2;
+    border-right: 1px solid var(--orange1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    overflow-y: auto;
+}
+
+.aboutOverlay::-webkit-scrollbar {
+    width: 6px;
+}
+
+.aboutOverlay::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.aboutOverlay::-webkit-scrollbar-thumb {
+    background: rgba(204, 85, 0, 0.5);
+    border-radius: 3px;
+}
+
+.aboutOverlay::-webkit-scrollbar-thumb:hover {
+    background: var(--orange1);
+}
+
+.aboutOverlay::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 22vw;
+    width: 8vw;
+    height: 1px;
+    background: var(--orange1);
+    opacity: 0.5;
+}
+
+.projectHeaderBlock {
+    margin-bottom: 2.8em;
+    display: flex;
+    flex-direction: column;
+}
+
+.headerTop {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    gap: 2em;
+}
+
+.headerLeft {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4em;
+}
+
+.projectTitle {
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: -0.012em;
+    margin: 0;
+    color: var(--pale);
+    line-height: 1.1;
+}
+
+.projectMeta {
+    font-size: 0.75rem;
+    color: var(--pale);
+    font-weight: 400;
+    opacity: 1;
+    letter-spacing: 0;
+    margin: 0;
+}
+
+.projectLinks {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-end;
+    gap: 1em;
+    font-size: 0.75rem;
+    font-weight: 300;
+    letter-spacing: 0;
+}
+
+.projectSite,
+.projectImdb,
+.projectInstagram {
+    color: var(--pale);
+    font-weight: 300;
+    text-decoration: none;
+    letter-spacing: 0;
+    transition: opacity 0.2s;
+    opacity: 1;
+}
+
+.projectSite:hover,
+.projectImdb:hover,
+.projectInstagram:hover {
+    opacity: 0.7;
+}
+
+.projectHeaderBlock::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.2);
+    margin-top: 1.5em;
+}
+
+.aboutContentBlock {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2vw;
+    align-items: flex-start;
+}
+
+.projectMainText {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+p {
+    margin: 0 0 1.15rem 0;
+    font-size: 1.14rem;
+    line-height: 1.47;
+    font-weight: 400;
+    letter-spacing: .005em;
+    color: var(--pale);
+    opacity: 1;
+}
+
+.projectStatus {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3em;
+    font-size: 0.85rem;
+    font-weight: 300;
+    color: var(--pale);
+    opacity: 1;
+}
+
+.projectStatus span:first-child {
+    font-weight: 700;
+    font-size: 0.85rem;
+}
+
+.statusValue {
+    font-weight: 300;
+    font-size: 0.85rem;
+}
+
+.projectTags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.62em;
+}
+
+.tag {
+    display: inline-block;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 0px;
+    background: rgba(255, 255, 255, 0.10);
+    padding: 0.23em 0.7em;
+    font-size: 0.82em;
+    color: var(--pale);
+    font-weight: 500;
+    letter-spacing: 0.012em;
+    opacity: 0.92;
+    margin-bottom: 0.22em;
+    transition: all 0.2s;
+}
+
+.tag:hover {
+    border-color: var(--orange1);
+    background: rgba(204, 85, 0, 0.2);
+    opacity: 1;
+}
+
+.logline {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    font-size: 0.85rem;
+    color: var(--pale);
+}
+
+.logline span:first-child {
+    font-weight: 700;
+    font-size: 0.85rem;
+}
+
+.loglineText {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    font-weight: 300;
+    letter-spacing: 0;
+}
+
+.projectSynopsisCol {
+    display: flex;
+    flex-direction: column;
+    gap: 0.9em;
+}
+
+.synopsisLabel {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--pale);
+    letter-spacing: 0;
+}
+
+.synopsisText {
+    font-size: 1.04rem;
+    color: var(--pale);
+    font-weight: 300;
+    line-height: 1.74;
+    letter-spacing: 0.005em;
+}
+
+.synopsisText p {
+    margin: 0 0 1.2em 0;
+    font-size: 1.04rem;
+}
+
+.synopsisText p:last-child {
+    margin-bottom: 0;
+}
+
+
+.upArrow,
+.downArrow {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    background: transparent;
+    border: none;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+    z-index: 8;
+    padding: 0;
+}
+
+.upArrow:hover,
+.downArrow:hover {
+    opacity: 1;
+}
+
+.upArrow .arrowLine {
+    width: 2px;
+    height: 32px;
+    background: var(--pale);
+    position: relative;
+}
+
+.upArrow .arrowLine::before,
+.upArrow .arrowLine::after {
+    content: '';
+    position: absolute;
+    width: 14px;
+    height: 2px;
+    background: var(--pale);
+    top: 0;
+}
+
+.upArrow .arrowLine::before {
+    left: -6px;
+    transform: rotate(45deg);
+    transform-origin: right center;
+}
+
+.upArrow .arrowLine::after {
+    right: -6px;
+    transform: rotate(-45deg);
+    transform-origin: left center;
+}
+
+.downArrow .arrowLine {
+    width: 2px;
+    height: 32px;
+    background: var(--pale);
+    position: relative;
+}
+
+.downArrow .arrowLine::before,
+.downArrow .arrowLine::after {
+    content: '';
+    position: absolute;
+    width: 14px;
+    height: 2px;
+    background: var(--pale);
+    bottom: 0;
+}
+
+.downArrow .arrowLine::before {
+    left: -6px;
+    transform: rotate(-45deg);
+    transform-origin: right center;
+}
+
+.downArrow .arrowLine::after {
+    right: -6px;
+    transform: rotate(45deg);
+    transform-origin: left center;
+}
+
+.upArrow {
+    bottom: -8vh;
+}
+
+.downArrow {
+    bottom: -8vh;
+}
+
+/* Tablet */
+@media (max-width: 1200px) {
+    .aboutGrid {
+        padding-left: 18vw;
+        padding-right: 5vw;
+    }
+
+    .projectTitle {
+        font-size: 1.3rem;
+    }
+
+    .aboutContentBlock {
+        grid-template-columns: 1fr;
+        gap: 3vw;
+    }
+
+    .headerTop {
+        flex-direction: column;
+        gap: 1em;
+    }
+
+    .projectLinks {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 1em;
+    }
+
+    .upArrow,
+    .downArrow {
+        width: 40px;
+        height: 40px;
+    }
+
+    .upArrow .arrowLine,
+    .downArrow .arrowLine {
+        height: 28px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .aboutGrid {
+        padding: 0 4vw;
+    }
+
+    .aboutOverlay {
+        padding: 4vw 4vw;
+        max-height: none;
+        overflow-y: visible;
+        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .aboutOverlay::before {
+        width: 16vw;
+    }
+
+    .projectTitle {
+        font-size: 1.2rem;
+    }
+
+    .projectMeta {
+        font-size: 0.7rem;
+    }
+
+    .projectLinks {
+        gap: 1em;
+        font-size: 0.7rem;
+    }
+
+    .loglineText {
+        font-size: 1rem;
+    }
+
+    .synopsisText {
+        font-size: 1rem;
+        line-height: 1.7;
+    }
+
+    .upArrow,
+    .downArrow {
+        width: 38px;
+        height: 38px;
+    }
+
+    .upArrow .arrowLine,
+    .downArrow .arrowLine {
+        height: 26px;
+    }
+
+    .upArrow {
+        bottom: -45px;
+    }
+
+    .downArrow {
+        bottom: -100px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .bgSection {
+        padding: 6vh 0 80px 0;
+    }
+
+    .aboutGrid {
+        padding: 0 4vw;
+    }
+
+    .aboutOverlay {
+        padding: 5vw 4vw;
+        border-radius: 0.16em;
+        border-right: none;
+        max-height: none;
+        overflow-y: visible;
+        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .aboutOverlay::before {
+        width: 18vw;
+    }
+
+    .projectTitle {
+        font-size: 1.1rem;
+    }
+
+    .projectMeta {
+        font-size: 0.65rem;
+    }
+
+    .projectLinks {
+        gap: 0.8em;
+        font-size: 0.65rem;
+    }
+
+    .projectHeaderBlock {
+        margin-bottom: 2em;
+    }
+
+    .projectHeaderBlock::after {
+        margin-top: 1.2em;
+    }
+
+    .headerTop {
+        flex-direction: column;
+        gap: 0.8em;
+    }
+
+    .aboutContentBlock {
+        grid-template-columns: 1fr;
+        gap: 2.5vw;
+        margin-top: 1.4em;
+    }
+
+    .projectMainText {
+        gap: 1.2em;
+        font-size: 0.95rem;
+    }
+
+    .loglineText {
+        font-size: 0.95rem;
+        line-height: 1.45;
+    }
+
+    .synopsisText {
+        font-size: 0.98rem;
+        line-height: 1.65;
+    }
+
+    .synopsisText p {
+        font-size: 0.98rem;
+    }
+
+    .tag {
+        font-size: 0.75em;
+        padding: 0.3em 0.8em;
+    }
+
+    .upArrow,
+    .downArrow {
+        width: 36px;
+        height: 36px;
+    }
+
+    .upArrow .arrowLine,
+    .downArrow .arrowLine {
+        height: 24px;
+    }
+
+    .upArrow {
+        bottom: -42px;
+    }
+
+    .downArrow {
+        bottom: -92px;
+    }
+}
+
+@media (max-width: 500px) {
+    .bgSection {
+        padding: 6vh 0 70px 0;
+    }
+
+    .aboutOverlay {
+        padding: 6vw 4vw;
+        border-radius: 0.16em;
+        border-right: none;
+    }
+
+    .aboutOverlay::before {
+        width: 20vw;
+    }
+
+    .projectTitle {
+        font-size: 1rem;
+    }
+
+    .projectMeta {
+        font-size: 0.6rem;
+    }
+
+    .projectLinks {
+        font-size: 0.6rem;
+        gap: 0.7em;
+    }
+
+    .loglineText {
+        font-size: 0.9rem;
+    }
+
+    .synopsisLabel {
+        font-size: 0.75rem;
+    }
+
+    .synopsisText {
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+
+    .synopsisText p {
+        font-size: 0.95rem;
+    }
+
+    .upArrow,
+    .downArrow {
+        width: 34px;
+        height: 34px;
+    }
+
+    .upArrow .arrowLine,
+    .downArrow .arrowLine {
+        height: 22px;
+    }
+
+    .upArrow {
+        bottom: -38px;
+    }
+
+    .downArrow {
+        bottom: -88px;
+    }
+}
+
+@media (max-width: 330px) {
+    .projectTitle {
+        font-size: 0.9rem;
+    }
+
+    .upArrow,
+    .downArrow {
+        width: 32px;
+        height: 32px;
+    }
+
+    .upArrow .arrowLine,
+    .downArrow .arrowLine {
+        height: 20px;
+    }
+}

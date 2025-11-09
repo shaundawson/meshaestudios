@@ -1,0 +1,388 @@
+:root {
+    --dark1: #2a2a2a;
+    --orange1: #cc5500;
+    --gray: #6b6b6b;
+    --pale: #fafafa;
+}
+
+.bgWrapper {
+    min-height: 100vh;
+    min-width: 100vw;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+    background: url('../assets/AboutPageBGImage.jpg') center center / cover no-repeat fixed;
+    background-color: var(--dark1);
+}
+
+.aboutGrid {
+    position: relative;
+    width: 100vw;
+    min-height: 90vh;
+    top: 9vh;
+}
+
+.aboutOverlay {
+    position: absolute;
+    right: 7vw;
+    bottom: auto;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 65vw;
+    max-height: 100vh;
+    background: linear-gradient(135deg, rgba(60, 40, 20, 0.55) 0%, rgba(30, 20, 10, 0.65) 100%);
+    padding: 1vw 2vw;
+    border-radius: 0.24em;
+    color: var(--pale);
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    z-index: 2;
+    justify-content: flex-start;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    border-right: 1px solid var(--orange1);
+    overflow-y: auto !important;
+}
+
+.aboutOverlay::-webkit-scrollbar {
+    width: 6px;
+}
+
+.aboutOverlay::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.aboutOverlay::-webkit-scrollbar-thumb {
+    background: rgba(204, 85, 0, 0.5);
+    border-radius: 3px;
+}
+
+.aboutOverlay::-webkit-scrollbar-thumb:hover {
+    background: var(--orange1);
+}
+
+.aboutOverlay::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 8vw;
+    height: 1px;
+    background: var(--orange1);
+    opacity: 0.5;
+}
+
+.aboutOverlay p,
+.aboutMainText p,
+.aboutSideText p {
+    font-size: 1rem;
+}
+
+.aboutTitle {
+    font-size: 1.3rem;
+    font-weight: 900;
+    letter-spacing: -0.012em;
+    margin-bottom: 1.15rem;
+    color: var(--pale);
+}
+
+.aboutContentBlock {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2vw;
+    align-items: flex-start;
+}
+
+.aboutMainText {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.aboutSideText {
+    flex: 1;
+    font-size: 1.09rem;
+    font-weight: 400;
+    color: var(--pale);
+    opacity: 0.87;
+    display: flex;
+    align-items: flex-start;
+}
+
+p {
+    margin: 0 0 1.15rem 0;
+    font-size: 1.14rem;
+    line-height: 1.47;
+    font-weight: 400;
+    letter-spacing: .005em;
+    color: var(--pale);
+    opacity: 1;
+}
+
+.characteristicsBlock {
+    margin-top: 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 0.42em;
+}
+
+.characteristicsLabel {
+    font-size: 0.95rem;
+    font-weight: 400;
+    color: var(--orange1);
+    letter-spacing: .095em;
+    margin-bottom: 0.18em;
+    opacity: 0.85;
+}
+
+.characteristics {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.62em;
+}
+
+.tag {
+    display: inline-block;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 0px;
+    background: rgba(255, 255, 255, 0.10);
+    padding: 0.23em 0.7em;
+    font-size: 0.82em;
+    color: var(--pale);
+    font-weight: 500;
+    letter-spacing: 0.012em;
+    opacity: 0.92;
+    margin-bottom: 0.22em;
+    transition: all 0.2s;
+}
+
+.tag:hover {
+    border-color: var(--orange1);
+    background: rgba(204, 85, 0, 0.2);
+    opacity: 1;
+}
+
+/* Tablet adjustments */
+@media (max-width: 1024px) {
+    .aboutOverlay {
+        right: 5vw;
+        width: 70vw;
+        max-height: 75vh;
+    }
+}
+
+
+@media (max-width: 900px) {
+    .aboutGrid {
+        min-height: auto;
+        height: auto;
+        padding: 6vh 0 15vh 0;
+    }
+
+    .aboutOverlay {
+        position: relative;
+        right: auto;
+        left: auto;
+        top: auto;
+        transform: none;
+        width: 92vw;
+        max-height: none;
+        height: auto;
+        margin: 0 auto;
+        padding: 5vw 4vw;
+        overflow-y: visible;
+        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .aboutOverlay::before {
+        width: 16vw;
+    }
+
+    .aboutTitle {
+        font-size: 1.5rem;
+    }
+
+    .aboutContentBlock {
+        grid-template-columns: 1fr;
+        gap: 2.5vh;
+    }
+
+    .aboutSideText {
+        font-size: 1.02rem;
+    }
+
+    p {
+        font-size: 1.08rem;
+        line-height: 1.5;
+    }
+
+    .characteristicsLabel {
+        font-size: 0.9rem;
+    }
+
+    .tag {
+        font-size: 0.8em;
+        padding: 0.3em 0.8em;
+    }
+}
+
+/* Small tablet */
+@media (max-width: 768px) {
+    .aboutGrid {
+        padding: 6vh 0 15vh 0;
+    }
+
+    .aboutOverlay {
+        width: 90vw;
+        padding: 5vw 4vw;
+    }
+
+    .aboutTitle {
+        font-size: 1.4rem;
+        margin-bottom: 1rem;
+    }
+
+    .aboutContentBlock {
+        gap: 2vh;
+    }
+
+    p {
+        font-size: 1.05rem;
+        margin-bottom: 1rem;
+    }
+}
+
+/* Standard mobile - iPhone */
+@media (max-width: 600px) {
+    .aboutGrid {
+        padding: 6vh 0 15vh 0;
+    }
+
+    .aboutOverlay {
+        width: 88vw;
+        padding: 6vw 4vw;
+        border-radius: 0.16em;
+    }
+
+    .aboutOverlay::before {
+        width: 20vw;
+    }
+
+    .aboutTitle {
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+    }
+
+    .aboutContentBlock {
+        grid-template-columns: 1fr;
+        gap: 1.8vh;
+    }
+
+    .aboutMainText {
+        gap: 0.3rem;
+    }
+
+    .aboutSideText {
+        font-size: 0.98rem;
+        line-height: 1.45;
+    }
+
+    p {
+        font-size: 1rem;
+        line-height: 1.45;
+        margin-bottom: 0.9rem;
+    }
+
+    .characteristicsBlock {
+        margin-top: 1em;
+        gap: 0.4em;
+    }
+
+    .characteristicsLabel {
+        font-size: 0.85rem;
+        margin-bottom: 0.15em;
+    }
+
+    .characteristics {
+        gap: 0.5em;
+    }
+
+    .tag {
+        font-size: 0.75em;
+        padding: 0.28em 0.65em;
+        margin-bottom: 0.18em;
+    }
+}
+
+/* Small mobile - iPhone SE */
+@media (max-width: 390px) {
+    .aboutGrid {
+        padding: 6vh 0 15vh 0;
+    }
+
+    .aboutOverlay {
+        width: 86vw;
+        padding: 6vw 3.5vw;
+        border-right: none;
+    }
+
+    .aboutOverlay::before {
+        width: 25vw;
+    }
+
+    .aboutTitle {
+        font-size: 1.2rem;
+        margin-bottom: 0.9rem;
+    }
+
+    1 .aboutContentBlock {
+        gap: 1.5vh;
+    }
+
+    .aboutSideText {
+        font-size: 0.95rem;
+    }
+
+    p {
+        font-size: 0.98rem;
+        line-height: 1.42;
+        margin-bottom: 0.8rem;
+    }
+
+    .characteristicsLabel {
+        font-size: 0.8rem;
+    }
+
+    .tag {
+        font-size: 0.72em;
+        padding: 0.25em 0.6em;
+    }
+}
+
+/* Extra small mobile */
+@media (max-width: 330px) {
+    .aboutGrid {
+        padding: 6vh 0 15vh 0;
+    }
+
+    .aboutOverlay {
+        width: 84vw;
+        padding: 5vw 3vw;
+        border-right: none;
+    }
+
+    .aboutTitle {
+        font-size: 1.1rem;
+    }
+
+    p {
+        font-size: 0.95rem;
+    }
+
+    .characteristicsLabel {
+        font-size: 0.75rem;
+    }
+}

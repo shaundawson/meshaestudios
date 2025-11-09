@@ -1,0 +1,583 @@
+:root {
+    --dark1: #2a2a2a;
+    --dark2: #1a1a1a;
+    --orange1: #cc5500;
+    --orange2: #be5103;
+    --gray: #6b6b6b;
+    --pale: #fafafa;
+
+    --gap-small: 1.2rem;
+    --gap-medium: 2rem;
+    --gap-large: 3.5rem;
+    --gap-menu-items: 0.22rem;
+}
+
+.iconSidebarWrapper {
+    position: relative;
+}
+
+.icon {
+    position: fixed;
+    top: 2rem;
+    right: 8rem;
+    left: unset;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: .45rem;
+    padding: 1rem;
+    z-index: 1400;
+}
+
+
+.menuLabelTop {
+    font-size: 0.65rem;
+    letter-spacing: 0.15em;
+    color: var(--pale);
+    opacity: 0.75;
+    font-family: 'Akzidenz-Grotesk', Helvetica, Arial, sans-serif;
+    transition: opacity 0.18s;
+    font-weight: 400;
+}
+
+.hamburgerLine {
+    background: var(--orange2);
+    border-radius: 0;
+    transition: background 0.18s;
+}
+
+.lineShort,
+.lineMedium,
+.lineLong {
+    width: 2rem;
+    height: 1px;
+}
+
+.icon:hover .hamburgerLine {
+    background: var(--orange1);
+}
+
+.icon:hover .menuLabelTop {
+    opacity: 1;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 340px;
+    max-width: 97vw;
+    background: var(--pale);
+    color: var(--gray);
+    z-index: 1450;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: 'Akzidenz-Grotesk', Helvetica, Arial, sans-serif;
+    padding: 1rem 2.1rem 2rem 2.1rem;
+    transform: translateX(-100%);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 0.35s cubic-bezier(.4, .13, .7, .89), opacity 0.16s cubic-bezier(.4, .13, .7, .89);
+}
+
+.sidebar::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 3px;
+    background: var(--orange1);
+    opacity: 0.75;
+}
+
+.sidebar.open {
+    transform: translateX(0%);
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.close {
+    background: none;
+    border: none;
+    color: var(--orange2);
+    font-size: 1.25rem;
+    cursor: pointer;
+    margin: 0.5rem 0 2.5rem auto;
+    padding: 0.3rem;
+    opacity: 0.6;
+    transition: opacity 0.18s, color 0.18s;
+}
+
+.close:hover {
+    opacity: 1;
+}
+
+.brandBlock {
+    padding-bottom: var(--gap-small);
+}
+
+.brandTitle {
+    font-size: 1.5rem;
+    font-weight: 900;
+    letter-spacing: -0.01em;
+    line-height: 1.07;
+    margin: 0;
+    display: flex;
+    gap: 0.35rem;
+    padding-top: 22vh;
+}
+
+.meshae {
+    color: var(--dark2);
+    font-weight: 900;
+}
+
+.studios {
+    color: var(--orange1);
+    font-weight: 300;
+}
+
+.missionBlock {
+    padding-bottom: var(--gap-large);
+}
+
+.missionText {
+    font-size: 1.12rem;
+    font-weight: 300;
+    color: var(--gray);
+    line-height: 1.21;
+    letter-spacing: 0.01em;
+}
+
+.moveBold,
+.cultureBold {
+    font-weight: 900;
+    color: var(--gray);
+}
+
+.menuSection {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: var(--gap-medium);
+}
+
+.sectionLabel {
+    color: var(--orange2);
+    font-size: 0.99rem;
+    text-transform: lowercase;
+    letter-spacing: 0.09em;
+    opacity: 0.85;
+    font-weight: 200;
+}
+
+.menuNav {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-menu-items);
+    margin: 0;
+    padding: 0;
+}
+
+.menuItem {
+    color: var(--gray);
+    font-size: 1.02rem;
+    font-weight: 400;
+    letter-spacing: 0.01em;
+    text-decoration: none;
+    padding: 0.21em 0 0.07em 0;
+    background: none;
+    border: none;
+    display: flex;
+    align-items: baseline;
+    gap: 0.7rem;
+    font-family: inherit;
+    opacity: 0.98;
+    transition: color 0.2s;
+}
+
+.menuNumber {
+    font-size: 0.72rem;
+    font-weight: 500;
+    color: var(--orange2);
+    opacity: 0.6;
+    min-width: 1.4rem;
+}
+
+.menuText {
+    flex: 1;
+}
+
+.menuItem:hover,
+.menuItem:focus {
+    color: var(--orange1);
+}
+
+.menuItem:hover .menuNumber {
+    opacity: 1;
+}
+
+.externalGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.externalLinks {
+    display: flex;
+    flex-direction: row;
+    gap: var(--gap-small);
+}
+
+.externalLink {
+    color: var(--gray);
+    font-size: 1.02rem;
+    text-decoration: none;
+    letter-spacing: 0.01em;
+    font-family: inherit;
+    opacity: 0.96;
+    font-weight: 400;
+    transition: color 0.17s;
+}
+
+.externalLink:hover {
+    color: var(--orange1);
+}
+
+.footerBio {
+    width: 80%;
+    color: var(--gray);
+    font-size: 0.85rem;
+    font-weight: 300;
+    text-align: left;
+    line-height: 1.32;
+    margin-top: var(--gap-medium);
+    margin-bottom: var(--gap-large);
+    opacity: 0.93;
+}
+
+.footerText {
+    color: var(--gray);
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    opacity: inherit;
+}
+
+.gapSmall {
+    height: var(--gap-small);
+}
+
+.gapMedium {
+    height: var(--gap-medium);
+}
+
+.gapLarge {
+    height: var(--gap-large);
+}
+
+.flexGrow {
+    flex-grow: 1;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: transparent;
+    z-index: 1420;
+    cursor: pointer;
+}
+
+/* Mobile-first: Full screen sidebar below 900px */
+@media (max-width: 900px) {
+    .icon {
+        top: 1.5rem;
+        right: 4vw;
+        padding: 0.8rem;
+        gap: 0.4rem;
+    }
+
+    .menuLabelTop {
+        font-size: 0.58rem;
+        letter-spacing: 0.12em;
+    }
+
+    /* ALL LINES UNIFORM on mobile */
+    .lineShort,
+    .lineMedium,
+    .lineLong {
+        width: 1.8rem;
+        /* All identical */
+        height: 2px;
+        /* All identical */
+    }
+
+    /* FULL SCREEN TAKEOVER */
+    .sidebar {
+        width: 100vw;
+        max-width: 100vw;
+        background: var(--pale);
+        padding: 1.5rem 6vw 0 6vw;
+        /* No bottom padding */
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    /* Remove vertical orange line on mobile */
+    .sidebar::before {
+        display: none;
+    }
+
+    /* Overlay becomes solid dark background */
+    .overlay {
+        background: rgba(0, 0, 0, 0.3);
+    }
+
+    .close {
+        font-size: 2.2rem;
+        margin: 0 0 2rem auto;
+        padding: 0.2rem 2rem;
+        color: var(--orange2);
+        opacity: 1;
+        font-weight: 100;
+        line-height: 1;
+    }
+
+    .close:hover {
+        color: var(--orange1);
+    }
+
+    .brandTitle {
+        font-size: 1.8rem;
+        padding-top: 2vh;
+    }
+
+    .missionText {
+        font-size: 1.08rem;
+    }
+
+    .menuSection {
+        margin-bottom: 1.8rem;
+    }
+
+    .sectionLabel {
+        font-size: 0.95rem;
+    }
+
+    .menuItem {
+        font-size: 1.05rem;
+        padding: 0.3em 0;
+    }
+
+    .menuNumber {
+        font-size: 0.75rem;
+    }
+
+    .externalGroup {
+        gap: 0.7rem;
+        margin-bottom: 2.5rem;
+        /* Space before footer */
+    }
+
+    .externalLink {
+        font-size: 1.05rem;
+    }
+
+    /* SWISS POSTER FOOTER WITH LINES */
+    .footerBio {
+        width: 80vw;
+        max-width: 80vw;
+
+    }
+
+    .footerText {
+        color: var(--gray);
+        font-size: 0.82rem;
+        font-weight: 300;
+        line-height: 1.42;
+        letter-spacing: 0.01em;
+        opacity: 0.95;
+        padding: 1.5vh 7vw;
+    }
+
+    .gapLarge {
+        height: 2.8rem;
+    }
+
+    .gapMedium {
+        height: 1.6rem;
+    }
+
+    .gapSmall {
+        height: 1rem;
+    }
+}
+
+/* Small mobile refinements (iPhone) */
+@media (max-width: 600px) {
+    .icon {
+        top: 1.2rem;
+        right: 3.5vw;
+        padding: 0.7rem;
+    }
+
+    .menuLabelTop {
+        font-size: 0.52rem;
+    }
+
+    /* ALL LINES UNIFORM on small mobile */
+    .lineShort,
+    .lineMedium,
+    .lineLong {
+        width: 1.6rem;
+
+        height: 1.5px;
+
+    }
+
+    .sidebar {
+        padding: 1.2rem 5vw 0 5vw;
+    }
+
+    .close {
+        font-size: 2rem;
+        margin: 0 0 1.5rem auto;
+    }
+
+    .brandTitle {
+        font-size: 1.6rem;
+        padding-top: 1.5vh;
+    }
+
+    .missionText {
+        font-size: 1rem;
+    }
+
+    .menuItem {
+        font-size: 1rem;
+    }
+
+    .menuNumber {
+        font-size: 0.7rem;
+    }
+
+    .sectionLabel {
+        font-size: 0.9rem;
+    }
+
+    .externalLink {
+        font-size: 1rem;
+    }
+
+    .footerBio {
+        margin-left: -5vw;
+        margin-right: -5vw;
+        border-top: 1.5px solid var(--orange1);
+        border-bottom: 1.5px solid var(--orange1);
+    }
+
+    .footerText {
+        font-size: 0.78rem;
+        line-height: 1.45;
+        padding: 3vh 5vw;
+    }
+
+    .gapLarge {
+        height: 2.5rem;
+    }
+
+    .gapMedium {
+        height: 1.4rem;
+    }
+}
+
+/* Very small mobile (iPhone SE) */
+@media (max-width: 390px) {
+    .icon {
+        top: 1rem;
+        right: 3vw;
+        padding: 0.6rem;
+    }
+
+    .menuLabelTop {
+        font-size: 0.48rem;
+    }
+
+    /* ALL LINES UNIFORM on very small mobile */
+    .lineShort,
+    .lineMedium,
+    .lineLong {
+        width: 1.5rem;
+        /* All identical */
+        height: 1.5px;
+        /* All identical */
+    }
+
+    .sidebar {
+        padding: 1rem 4.5vw 0 4.5vw;
+    }
+
+    .close {
+        font-size: 1.9rem;
+        margin: 0 0 1.2rem auto;
+    }
+
+    .brandTitle {
+        font-size: 1.45rem;
+        padding-top: 1vh;
+    }
+
+    .missionText {
+        font-size: 0.95rem;
+    }
+
+    .menuItem {
+        font-size: 0.98rem;
+        padding: 0.25em 0;
+    }
+
+    .menuNumber {
+        font-size: 0.68rem;
+    }
+
+    .sectionLabel {
+        font-size: 0.85rem;
+    }
+
+    .externalLink {
+        font-size: 0.98rem;
+    }
+
+    .footerBio {
+        margin-left: -4.5vw;
+        margin-right: -4.5vw;
+        border-top: 1px solid var(--orange1);
+        border-bottom: 1px solid var(--orange1);
+    }
+
+    .footerText {
+        font-size: 0.75rem;
+        line-height: 1.48;
+        padding-top: 2.5vh;
+        padding-right: 1.5vw;
+        padding-bottom: 2.5vh;
+        padding-left: 3.5vw;
+    }
+
+    .gapLarge {
+        height: 2.2rem;
+    }
+
+    .gapMedium {
+        height: 1.2rem;
+    }
+}

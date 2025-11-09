@@ -1,0 +1,145 @@
+.footer {
+    position: fixed;
+    right: 8rem;
+    bottom: 2vh;
+    width: auto;
+    min-width: 200px;
+    max-width: 45vw;
+    color: var(--dark1);
+    background: transparent;
+    font-family: 'Akzidenz-Grotesk', Helvetica, Arial, sans-serif;
+    font-size: clamp(.86rem, 0.7vw, 1rem);
+    font-weight: 300;
+    text-align: right;
+    z-index: 1100;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    letter-spacing: 0.01em;
+    box-sizing: border-box;
+}
+
+.footCopyPolicyGroup {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.12em;
+    line-height: 1.13;
+}
+
+.footCopyright {
+    color: var(--gray);
+    opacity: 0.82;
+    font-size: 1em;
+    letter-spacing: 0.01em;
+}
+
+.footDivider {
+    font-size: 1.1em;
+    opacity: 0.35;
+    padding: 0 0.15em;
+}
+
+.footerLink {
+    color: var(--gray);
+    text-decoration: none;
+    text-transform: lowercase;
+    letter-spacing: 0.01em;
+    opacity: 0.89;
+    font-size: 1em;
+    margin: 0;
+    padding: 0 0.05em;
+    transition: color 0.16s;
+}
+
+.footerLink:hover,
+.footerLink:focus {
+    color: var(--dark1);
+    text-decoration: underline;
+}
+
+/* Tablet adjustments */
+@media (max-width: 820px) and (min-width: 601px) {
+    .footer {
+        right: 5vw;
+        bottom: 3vh;
+        font-size: 0.85rem;
+        max-width: 55vw;
+    }
+}
+
+/* MINIMAL SWISS TYPOGRAPHY FOOTER - Mobile */
+@media (max-width: 600px) {
+    .footer {
+        position: fixed;
+        left: 10vw;
+        bottom: 0;
+        right: auto;
+        width: auto;
+        max-width: 80vw;
+        min-width: unset;
+        background: transparent;
+        border-top: 1px solid var(--orange1);
+        padding: 1.5vh 0 0 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+        z-index: 1100;
+    }
+
+    .footCopyPolicyGroup {
+        flex-direction: column;
+        gap: 0.3em;
+        align-items: flex-start;
+    }
+
+    .footCopyright {
+        color: var(--gray);
+        opacity: 0.85;
+        font-size: 0.7rem;
+        font-weight: 300;
+        letter-spacing: 0.01em;
+    }
+
+    .footDivider {
+        display: none;
+    }
+
+    .footerLink {
+        color: var(--gray);
+        opacity: 0.85;
+        font-size: 0.7rem;
+        font-weight: 300;
+        letter-spacing: 0.01em;
+        text-decoration: underline;
+        text-decoration-thickness: 1px;
+        text-underline-offset: 2px;
+    }
+
+    .footerLink:hover {
+        color: var(--orange1);
+        opacity: 1;
+    }
+}
+
+/* Very small mobile */
+@media (max-width: 390px) {
+    .footer {
+        left: 10vw;
+        bottom: 2.5vh;
+        padding: 1.2vh 0 0 0;
+    }
+
+    .footCopyPolicyGroup {
+        gap: 0.25em;
+    }
+
+    .footCopyright {
+        font-size: 0.68rem;
+    }
+
+    .footerLink {
+        font-size: 0.68rem;
+    }
+}

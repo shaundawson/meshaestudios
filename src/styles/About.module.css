@@ -1,20 +1,27 @@
 :root {
     --dark1: #2a2a2a;
+    --dark2: #1a1a1a;
     --orange1: #cc5500;
     --gray: #6b6b6b;
     --pale: #fafafa;
+    --warm-dark: #1e140a;
+    /* New - warm background for About page */
 }
+
 
 .bgWrapper {
     min-height: 100vh;
-    min-width: 100vw;
     width: 100vw;
     height: 100vh;
-    position: absolute;
+    position: fixed;
     inset: 0;
     z-index: -2;
-    background: url('../assets/AboutPageBGImage.jpg') center center / cover no-repeat fixed;
+    background: var(--dark2) url('../assets/AboutPageBGImage.jpg') center center / cover no-repeat fixed;
     background-color: var(--dark1);
+    background-size: cover;
+    background-position: center top;
+    background-attachment: fixed;
+    /* Parallax effect */
 }
 
 .aboutGrid {
@@ -236,7 +243,7 @@ p {
     }
 
     .aboutOverlay {
-        width: 90vw;
+        width: 80vw;
         padding: 5vw 4vw;
     }
 
@@ -262,9 +269,10 @@ p {
     }
 
     .aboutOverlay {
-        width: 88vw;
-        padding: 6vw 4vw;
+        width: 90vw;
+        padding: 4vw 2vw;
         border-radius: 0.16em;
+        border-right: none;
     }
 
     .aboutOverlay::before {
@@ -288,6 +296,7 @@ p {
     .aboutSideText {
         font-size: 0.98rem;
         line-height: 1.45;
+        display: none !important;
     }
 
     p {
@@ -320,11 +329,11 @@ p {
 /* Small mobile - iPhone SE */
 @media (max-width: 390px) {
     .aboutGrid {
-        padding: 6vh 0 15vh 0;
+        padding: 3vh 0 15vh 0;
     }
 
     .aboutOverlay {
-        width: 86vw;
+        width: 96vw;
         padding: 6vw 3.5vw;
         border-right: none;
     }
@@ -338,12 +347,13 @@ p {
         margin-bottom: 0.9rem;
     }
 
-    1 .aboutContentBlock {
+    .aboutContentBlock {
         gap: 1.5vh;
     }
 
     .aboutSideText {
         font-size: 0.95rem;
+        display: none !important;
     }
 
     p {

@@ -30,7 +30,7 @@ export default function About() {
                         </div>
                         <div className={styles.aboutSideText}>
                             <p>
-                                This studio operates with a belief that honest storytelling shapes the future. Integer accumsan, felis ut imperdiet fermentum, enim velit euismod lectus, vitae mollis arcu augue nec mi. In 2025, we continue to push boundaries while working closely with partners and brands that value authenticity. Morbi in imperdiet mi, ac feugiat mauris. Quisque vitae imperdiet magna. Sed ut turpis et eros tincidunt tincidunt vel in nisl. Integer quis nisi sed odio posuere feugiat.
+                                This studio operates with a belief that honest storytelling shapes the future. Integer accumsan, felis ut imperdiet fermentum, enim velit euismod lectus, vitae mollis arcu augue nec mi. In 2025, we continue to push boundaries while working closely with partners and brands that value authenticity.
                             </p>
                         </div>
                     </div>

@@ -43,8 +43,8 @@
 
 .bgImage {
     position: fixed;
-    top: 0;
-    left: 6vw;
+    top: -5vh;
+    left: 8vw;
     z-index: -2;
     width: 100vw;
     height: 100vh;

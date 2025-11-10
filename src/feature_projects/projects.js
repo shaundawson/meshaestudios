@@ -10,9 +10,9 @@ export const projects = [
             "Set in Jacksonville, Florida—a city where the legacy of slave patrols still shapes today’s policing—the film follows the lives of Black children navigating the fallout of mass incarceration.  Here, children learn to fear badges, not for what they protect, but for what they take away. Parents are jailed for poverty, for minor infractions, for simply being Black in America. These stories are not outliers; they are the rule in a nation where the criminal justice system has replaced the auction block with the courtroom, and separation papers echo the ledgers of slavery."
         ],
         backgroundImage: "/assets/Project1BGImage.jpg",
-        website: "https://example.com/apples",
-        imdb: "https://imdb.com/title/...",
-        instagram: "https://instagram.com/example",
+        website: "https://afewmadapples.com",
+        imdb: "https://www.imdb.com/title/tt36590675/?ref_=fea_nv_srb_sm",
+        instagram: "https://www.instagram.com/afewmadapples",
         tags: ["mass incarceration", "activism", "Black Lives Matter", "documentary"]
     },
     {
@@ -26,9 +26,9 @@ export const projects = [
             "Her survival kit includes her soul tribe: Shondarosa, her long-distance girlfriend who turns every phone call into a TED Talk about boundaries; Keke, her asexual musician partner who responds to workplace drama with perfectly curated playlists and deadpan memes; and Javonte, her gospel-trained best friend who can bless you and read you for filth in the same sentence.",
             "When Snackly gets bought by an even more ridiculous company called Slimeo, Shantasia stops pretending to be grateful and starts filming. Her documentary becomes the internet’s new obsession, and suddenly everyone wants to know how she survived the corporate comedy show."],
         backgroundImage: "/assets/Project2BGImage.jpg",
-        website: "https://example.com/shantasia",
-        imdb: "https://imdb.com/title/...",
-        instagram: "https://instagram.com/example2",
+        website: "https://watchshantasia.com",
+        imdb: "https://www.imdb.com/title/tt38456123/?ref_=nv_sr_srsg_0_tt_1_nm_0_in_0_q_tt38456123",
+        instagram: "https://www.instagram.com/shantasiatheseries",
         tags: ["Diversity and Inclusion", "Web Series", "Animation"]
     }
 ];

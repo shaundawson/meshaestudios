@@ -32,6 +32,7 @@
     justify-content: center;
     box-sizing: border-box;
     padding: 6vh 0;
+    top: 4vh;
 }
 
 .aboutGrid {
@@ -47,7 +48,6 @@
 .aboutOverlay {
     right: 7vw;
     bottom: auto;
-    top: 50%;
     width: 65vw;
     max-height: 100vh;
     background: linear-gradient(135deg, rgba(60, 40, 20, 0.55) 0%, rgba(30, 20, 10, 0.85) 100%);
@@ -251,10 +251,11 @@ p {
 }
 
 .loglineText {
-    font-size: 1.1rem;
-    line-height: 1.5;
+    font-size: 1.04rem;
+    color: var(--pale);
     font-weight: 300;
-    letter-spacing: 0;
+    line-height: 1.74;
+    letter-spacing: 0.005em;
 }
 
 .projectSynopsisCol {
@@ -448,6 +449,7 @@ p {
 
     .loglineText {
         font-size: 1rem;
+        line-height: 1.7;
     }
 
     .synopsisText {
@@ -536,17 +538,17 @@ p {
     }
 
     .loglineText {
-        font-size: 0.95rem;
+        font-size: 1rem;
         line-height: 1.45;
     }
 
     .synopsisText {
-        font-size: 0.98rem;
+        font-size: 1rem;
         line-height: 1.65;
     }
 
     .synopsisText p {
-        font-size: 0.98rem;
+        font-size: 1rem;
     }
 
     .tag {
@@ -583,6 +585,7 @@ p {
         padding: 6vw 4vw;
         border-radius: 0.16em;
         border-right: none;
+        width: 45vh;
     }
 
     .aboutOverlay::before {
@@ -608,15 +611,18 @@ p {
 
     .synopsisLabel {
         font-size: 0.75rem;
+        display: none !important;
     }
 
     .synopsisText {
         font-size: 0.95rem;
         line-height: 1.6;
+        display: none !important;
     }
 
     .synopsisText p {
         font-size: 0.95rem;
+        display: none !important;
     }
 
     .upArrow,

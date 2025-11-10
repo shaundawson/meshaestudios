@@ -16,7 +16,7 @@
     position: fixed;
     inset: 0;
     z-index: -2;
-    background: var(--dark2) url('../assets/AboutPageBGImage.jpg') center center / cover no-repeat fixed;
+    background: url('../assets/AboutPageBGImage.jpg') center center / cover no-repeat fixed;
     background-color: var(--dark1);
     background-size: cover;
     background-position: center top;

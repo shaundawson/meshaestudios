@@ -86,6 +86,7 @@
         align-items: flex-start;
         text-align: left;
         z-index: 1100;
+        display: none !important;
     }
 
     .footCopyPolicyGroup {
@@ -129,17 +130,21 @@
         left: 10vw;
         bottom: 5.5vh;
         padding: 1.2vh 0 0 0;
+        display: none !important;
     }
 
     .footCopyPolicyGroup {
         gap: 0.25em;
+        display: none !important;
     }
 
     .footCopyright {
         font-size: 0.68rem;
+        display: none !important;
     }
 
     .footerLink {
         font-size: 0.68rem;
+        display: none !important;
     }
 }

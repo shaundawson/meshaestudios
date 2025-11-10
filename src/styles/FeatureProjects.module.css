@@ -50,7 +50,7 @@
     bottom: auto;
     width: 65vw;
     max-height: 100vh;
-    background: linear-gradient(135deg, rgba(60, 40, 20, 0.55) 0%, rgba(30, 20, 10, 0.85) 100%);
+    background: linear-gradient(135deg, rgba(60, 40, 20, 0.55) 0%, rgba(30, 20, 10, 0.85) 95%);
     padding: 1vw 2vw;
     border-radius: 0.24em;
     color: var(--pale);
@@ -241,8 +241,10 @@ p {
     display: flex;
     flex-direction: column;
     gap: 0.5em;
-    font-size: 0.85rem;
+    font-size: 1.04rem;
     color: var(--pale);
+    margin: 0 0 1.2em;
+
 }
 
 .logline span:first-child {

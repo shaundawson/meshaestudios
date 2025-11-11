@@ -36,6 +36,12 @@ export const pins = [
         description: 'Website UI concept for a minimal design studio.'
     },
     {
+        image: 'https://images.unsplash.com/photo-1424746219973-8fe3bd07d8e3?auto=format&fit=crop&w=440&q=80',
+        aspect: '7/10', // portrait
+        title: 'Grid Study',
+        description: 'Editorial layout exploration with Swiss gridlines.'
+    },
+    {
         image: 'https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=800&q=80',
         aspect: '7/5', // landscape
         title: 'Architecture Simplicity',

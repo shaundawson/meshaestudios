@@ -51,7 +51,7 @@
     width: 65vw;
     max-height: 100vh;
     background: linear-gradient(135deg, rgba(60, 40, 20, 0.55) 0%, rgba(30, 20, 10, 0.85) 95%);
-    padding: 1vw 2vw;
+    padding: 2vw 2vw;
     border-radius: 0.24em;
     color: var(--pale);
     display: flex;

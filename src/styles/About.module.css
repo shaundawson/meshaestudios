@@ -87,12 +87,24 @@
     font-size: 1rem;
 }
 
-.aboutTitle {
-    font-size: 1.3rem;
-    font-weight: 900;
-    letter-spacing: -0.012em;
-    margin-bottom: 1.15rem;
+.headingNum {
+    font-size: 0.7em;
+    color: var(--orange1);
+    font-weight: 400;
+    margin-right: 0.23em;
+}
+
+.headingMain {
+    font-size: 1em;
+    font-weight: 500;
     color: var(--pale);
+    letter-spacing: -0.01em;
+}
+
+.aboutTitle {
+    display: flex;
+    align-items: center;
+    gap: 0.3em;
 }
 
 .aboutContentBlock {
@@ -138,8 +150,8 @@ p {
 
 .characteristicsLabel {
     font-size: 0.95rem;
-    font-weight: 400;
-    color: var(--orange1);
+    font-weight: 600;
+    color: var(--pale);
     letter-spacing: .095em;
     margin-bottom: 0.18em;
     opacity: 0.85;

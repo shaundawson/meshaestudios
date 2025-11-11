@@ -6,7 +6,10 @@ export default function About() {
         <div className={styles.bgWrapper}>
             <div className={styles.aboutGrid}>
                 <div className={styles.aboutOverlay}>
-                    <h1 className={styles.aboutTitle}>about</h1>
+                    <h1 className={styles.aboutTitle}>
+                        <span className={styles.headingNum}>02</span>{" "}
+                        <span className={styles.headingMain}>about</span>
+                    </h1>
                     <div className={styles.aboutContentBlock}>
                         <div className={styles.aboutMainText}>
                             <p>

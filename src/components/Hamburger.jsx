@@ -6,7 +6,7 @@ const menuItems = [
     { to: '/', label: 'home', number: '01' },
     { to: '/about', label: 'about', number: '02' },
     { to: '/designlab', label: 'design lab', number: '03' },
-    { to: '/featureprojects', label: 'feature projects', number: '04' },
+    { to: '/storylab', label: 'story lab', number: '04' },
     { to: '/contact', label: 'contact', number: '05' }
 ];
 

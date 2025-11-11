@@ -1,8 +1,8 @@
 import React, { useRef, useEffect, useState } from 'react';
-import styles from '../styles/FeatureProjects.module.css';
+import styles from '../styles/Story_Lab.module.css';
 import { projects } from '../feature_projects/projects.js';
 
-export default function FeatureProjects() {
+export default function Story_Lab() {
     const sectionRefs = useRef([]);
     const [activeBgIdx, setActiveBgIdx] = useState(0);
 

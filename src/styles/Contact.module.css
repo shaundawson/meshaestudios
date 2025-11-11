@@ -22,7 +22,7 @@
     content: '';
     position: absolute;
     inset: 0;
-    background: url('../assets/ContactBGImage.jpg') center center / cover no-repeat fixed;
+    background: url('../assets/ContactBGImage.jpg') center bottom / cover no-repeat fixed;
     transform: scaleX(-1);
     z-index: -1;
 }
@@ -117,7 +117,7 @@
     }
 
     .contactHeroGrid::before {
-        background: url('../assets/ContactBGImage.jpg') center center / cover no-repeat scroll;
+        background: url('../assets/ContactBGImage.jpg') top center / cover no-repeat scroll;
         transform: scaleX(-1);
         z-index: -1;
     }
@@ -155,13 +155,13 @@
 /* Small mobile */
 @media (max-width: 500px) {
     .contactBlock {
-        width: 90vw;
-        height: 70vh;
+        width: 85vw;
+        height: 100vh;
         padding: 5vh 5vw;
         gap: 2.5vh;
-        background: rgba(12, 12, 12, 0.80);
         backdrop-filter: blur(4px);
         margin-right: 0;
+        margin-top: 24vh;
     }
 
     .heroHeader {
@@ -173,7 +173,7 @@
     }
 
     .contactHeroGrid::before {
-        background: url('../assets/ContactBGImage.jpg') center center / cover no-repeat;
+        background: url('../assets/ContactBGImage.jpg') center bottom / cover no-repeat !important;
         transform: scaleX(-1);
     }
 

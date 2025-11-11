@@ -10,10 +10,10 @@ export default function About() {
                     <div className={styles.aboutContentBlock}>
                         <div className={styles.aboutMainText}>
                             <p>
-                                Meshae Studios shapes narratives for meaningful impact in culture. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sodales enim eu turpis cursus, id dictum libero feugiat. Pellentesque eu efficitur erat. Morbi aliquet risus sem, a semper neque gravida nec.
+                                Meshae Studios turns hidden truths into movements for change. We blend filmmaking with engineering and product strategy to build narratives that reach people and drive real results. Every project is crafted for intentional reach, combining artistic vision with technical precision and systematic measurement.
                             </p>
                             <p>
-                                Nunc in volutpat eros, ac dictum libero. Ut dictum, turpis sit amet facilisis commodo, urna turpis posuere sem, at pretium magna vestibulum ac. Fusce malesuada turpis vitae magna pulvinar pretium. In commodo risus in massa dictum, et cursus erat posuere.
+                                Purpose driven organizations need more than a good story. They need partners who speak both creative and technical fluently. We work with filmmakers, nonprofits, and mission driven founders to craft work that's brave, rigorous, and built to land.
                             </p>
                             <div className={styles.characteristicsBlock}>
                                 <span className={styles.characteristicsLabel}>characteristics</span>
@@ -30,7 +30,7 @@ export default function About() {
                         </div>
                         <div className={styles.aboutSideText}>
                             <p>
-                                This studio operates with a belief that honest storytelling shapes the future. Integer accumsan, felis ut imperdiet fermentum, enim velit euismod lectus, vitae mollis arcu augue nec mi. In 2025, we continue to push boundaries while working closely with partners and brands that value authenticity.
+                                Led by Shaun Dawson, a Black nonbinary filmmaker and engineer, Meshae Studios believes honest work changes culture. We're a team of storytellers, strategists, and builders committed to craft that matters. Every project is intentional, measured, and built to move things.
                             </p>
                         </div>
                     </div>

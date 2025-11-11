@@ -24,7 +24,7 @@ body {
 }
 
 .masonryGallery {
-    max-width: 80vw;
+    max-width: 75vw;
     margin: 0 auto;
     padding: 0 24px;
     column-count: 4;

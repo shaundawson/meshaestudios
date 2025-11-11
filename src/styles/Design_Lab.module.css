@@ -283,8 +283,8 @@ body {
 
     .headerAndDesc,
     .masonryGallery {
-        max-width: 99vw;
-        padding-left: 4px;
+        width: 96vw;
+        padding: 0vw 4vw;
     }
 
     .masonryGallery {

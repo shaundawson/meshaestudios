@@ -13,11 +13,10 @@ const Design_Lab = () => (
                 <p>
                     The Design Lab at Meshae Studios is where visual storytelling meets innovative technology.
                     We create digital branding, culture-driven campaigns, and gallery showcases for justice-minded creatives, founders, and brands.
-                    Here you'll find projects that merge minimal Swiss structure, cinematic aesthetics, and purposeful strategy.
+                    Here you'll find projects that merge minimal design, cinematic aesthetics, and purposeful strategy.
                 </p>
             </div>
         </div>
-        {/* Important: DO NOT wrap Gallery in .masonryGallery here! <Gallery /> must do it internally */}
         <Gallery />
     </div>
 )

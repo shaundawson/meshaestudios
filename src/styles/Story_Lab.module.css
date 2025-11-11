@@ -135,7 +135,7 @@
     align-items: flex-start;
     justify-content: flex-end;
     gap: 1em;
-    font-size: 0.75rem;
+    font-size: 0.82rem;
     font-weight: 300;
     letter-spacing: 0;
 }
@@ -191,7 +191,7 @@
 p {
     margin: 0 0 1.15rem 0;
     font-size: 1.14rem;
-    line-height: 1.47;
+    line-height: 1.30 !important;
     font-weight: 400;
     letter-spacing: .005em;
     color: var(--pale);
@@ -252,6 +252,7 @@ p {
     font-size: 1.04rem;
     color: var(--pale);
     margin: 0 0 1.2em;
+    line-height: 1.30em;
 
 }
 

@@ -11,9 +11,9 @@ export default function Footer() {
                 <span className={styles.footDivider}>|</span>
                 <a
                     className={styles.footerLink}
-                    href="https://www.meshaestudios.com"
+                    href="mailto:admin@meshaestudios.com"
                 >
-                    privacy policy
+                    admin@meshaestudios.com
                 </a>
             </div>
         </footer>

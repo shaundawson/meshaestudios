@@ -364,8 +364,12 @@ p {
         gap: 1.5vh;
     }
 
+    .aboutMainText p {
+        font-size: 0.85em;
+    }
+
     .aboutSideText {
-        font-size: 0.95rem;
+        font-size: 0.85rem;
         display: none !important;
     }
 

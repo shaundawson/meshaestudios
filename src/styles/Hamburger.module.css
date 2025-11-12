@@ -671,7 +671,7 @@
     }
 
     .footerBio {
-        margin-top: auto;
+        margin-bottom: 4vh;
         padding-top: 0.6rem;
         padding-bottom: 1rem;
         border-top: 1px solid var(--orange1);

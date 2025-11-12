@@ -281,7 +281,7 @@ p {
     }
 
     .aboutOverlay {
-        width: 90vw;
+        width: 100vw;
         padding: 4vw 4vw;
         border-radius: 0.16em;
         border-right: none;

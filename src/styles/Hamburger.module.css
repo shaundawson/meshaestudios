@@ -341,10 +341,10 @@
     cursor: pointer;
 }
 
-/* DESKTOP: Original 340px width */
+/* DESKTOP */
 @media (min-width: 901px) {
     .sidebar {
-        width: 340px;
+        width: 20vw;
         overflow: hidden;
     }
 }

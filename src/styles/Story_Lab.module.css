@@ -3,6 +3,62 @@
     --orange1: #cc5500;
     --gray: #6b6b6b;
     --pale: #f9f9f9;
+
+    /* Typography Scale: Small, Medium, Large */
+    --font-sm: 0.85rem;
+    --font-md: 1rem;
+    --font-lg: 1em;
+
+    /* Font Weights: Light, Medium, Heavy */
+    --weight-light: 300;
+    --weight-medium: 400;
+    --weight-heavy: 500;
+
+    /* Spacing Scale: Small, Medium, Large */
+    --space-sm: 0.75rem;
+    --space-md: 1.5rem;
+    --space-lg: 2.5rem;
+}
+
+.storyLabHeading {
+    display: flex;
+    align-items: center;
+    gap: 0.4em;
+    margin-bottom: var(--space-md);
+    margin-top: 0;
+}
+
+.headingNum {
+    font-size: 0.75em;
+    color: var(--orange1);
+    font-weight: var(--weight-heavy);
+    margin-right: 0.3em;
+}
+
+.headingMain {
+    font-size: 1em;
+    font-weight: var(--weight-heavy);
+    color: var(--pale);
+    letter-spacing: -0.02em;
+}
+
+.headerSection {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+    margin-bottom: var(--space-lg);
+    padding-bottom: var(--space-lg);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.labDescription p {
+    margin: 0;
+    font-size: var(--font-md);
+    line-height: 1.58;
+    font-weight: var(--weight-light);
+    letter-spacing: .005em;
+    color: var(--pale);
+    opacity: 0.96;
 }
 
 .contentWrapper {
@@ -24,15 +80,15 @@
 }
 
 .bgSection {
-    min-height: 100vh;
+    min-height: 55vh;
     width: 100vw;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     box-sizing: border-box;
-    padding: 6vh 0;
-    top: 4vh;
+    padding-top: 8vh;
+    padding-bottom: 22vh;
 }
 
 .aboutGrid {
@@ -46,20 +102,19 @@
 }
 
 .aboutOverlay {
-    right: 7vw;
-    bottom: auto;
-    width: 65vw;
+    width: 50vw;
     max-height: 100vh;
-    background: linear-gradient(135deg, rgba(60, 40, 20, 0.55) 0%, rgba(30, 20, 10, 0.85) 95%);
-    padding: 2vw 2vw;
-    border-radius: 0.24em;
+    background: linear-gradient(135deg, rgba(60, 40, 20, 0.70) 0%, rgba(30, 20, 10, 0.88) 100%);
+    padding: 2.8vw 3vw;
+    border-radius: 0.18em;
     color: var(--pale);
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
     z-index: 2;
-    border-right: 1px solid var(--orange1);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    border-right: 2px solid var(--orange1);
+    border-bottom: 1px solid rgba(204, 85, 0, 0.15);
+    box-shadow: 0 10px 42px rgba(0, 0, 0, 0.35);
     overflow-y: auto;
 }
 
@@ -84,15 +139,13 @@
     content: '';
     position: absolute;
     top: 0;
-    left: 22vw;
-    width: 8vw;
-    height: 1px;
-    background: var(--orange1);
-    opacity: 0.5;
+    left: 0;
+    width: 0;
+    height: 0;
 }
 
 .projectHeaderBlock {
-    margin-bottom: 2.8em;
+    margin-bottom: var(--space-lg);
     display: flex;
     flex-direction: column;
 }
@@ -113,20 +166,27 @@
 
 .projectTitle {
     font-size: 1.5rem;
-    font-weight: 600;
-    letter-spacing: -0.012em;
-    margin: 0;
-    color: var(--pale);
+    font-weight: var(--weight-heavy);
+    letter-spacing: -0.03em;
+    margin: 0 0 var(--space-sm) 0;
+    color: var(--orange1);
     line-height: 1.1;
 }
 
+.projectTitle span {
+    color: var(--orange1);
+    font-weight: var(--weight-light);
+    font-size: 1.2em;
+    margin-right: 0.2em;
+}
+
 .projectMeta {
-    font-size: 0.75rem;
+    font-size: var(--font-sm);
     color: var(--pale);
-    font-weight: 400;
-    opacity: 1;
-    letter-spacing: 0;
-    margin: 0;
+    font-weight: var(--weight-light);
+    opacity: 0.88;
+    letter-spacing: 0.01em;
+    margin: 0 0 1.2em 0;
 }
 
 .projectLinks {
@@ -136,7 +196,7 @@
     justify-content: flex-end;
     gap: 1em;
     font-size: 0.82rem;
-    font-weight: 300;
+    font-weight: var(--weight-light);
     letter-spacing: 0;
 }
 
@@ -150,7 +210,7 @@
     padding: 0.23em 0.7em;
     font-size: 0.82em;
     color: var(--pale);
-    font-weight: 500;
+    font-weight: var(--weight-medium);
     letter-spacing: 0.012em;
     opacity: 0.92;
     text-decoration: none;
@@ -171,13 +231,13 @@
     width: 100%;
     height: 1px;
     background: rgba(255, 255, 255, 0.2);
-    margin-top: 1.5em;
+    margin-top: var(--space-md);
 }
 
 .aboutContentBlock {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 2vw;
+    gap: 3vw;
     align-items: flex-start;
 }
 
@@ -185,14 +245,14 @@
     flex: 2;
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: var(--space-md);
 }
 
 p {
-    margin: 0 0 1.15rem 0;
-    font-size: 1.14rem;
-    line-height: 1.30 !important;
-    font-weight: 400;
+    margin: 0 0 var(--space-md) 0;
+    font-size: var(--font-md);
+    line-height: 1.62;
+    font-weight: var(--weight-light);
     letter-spacing: .005em;
     color: var(--pale);
     opacity: 1;
@@ -202,20 +262,20 @@ p {
     display: flex;
     flex-direction: column;
     gap: 0.3em;
-    font-size: 0.85rem;
-    font-weight: 300;
+    font-size: var(--font-sm);
+    font-weight: var(--weight-light);
     color: var(--pale);
     opacity: 1;
 }
 
 .projectStatus span:first-child {
-    font-weight: 700;
-    font-size: 0.85rem;
+    font-weight: var(--weight-heavy);
+    font-size: var(--font-sm);
 }
 
 .statusValue {
-    font-weight: 300;
-    font-size: 0.85rem;
+    font-weight: var(--weight-light);
+    font-size: var(--font-sm);
 }
 
 .projectTags {
@@ -232,7 +292,7 @@ p {
     padding: 0.23em 0.7em;
     font-size: 0.82em;
     color: var(--pale);
-    font-weight: 500;
+    font-weight: var(--weight-medium);
     letter-spacing: 0.012em;
     opacity: 0.92;
     margin-bottom: 0.22em;
@@ -248,153 +308,71 @@ p {
 .logline {
     display: flex;
     flex-direction: column;
-    gap: 0.5em;
-    font-size: 1.04rem;
+    gap: var(--space-sm);
+    font-size: var(--font-md);
     color: var(--pale);
-    margin: 0 0 1.2em;
-    line-height: 1.30em;
-
+    margin: 0 0 var(--space-md);
+    line-height: 1.62;
 }
 
 .logline span:first-child {
-    font-weight: 700;
-    font-size: 0.85rem;
+    font-weight: var(--weight-heavy);
+    font-size: var(--font-sm);
 }
 
 .loglineText {
-    font-size: 1.04rem;
+    font-size: var(--font-md);
     color: var(--pale);
-    font-weight: 300;
-    line-height: 1.74;
+    font-weight: var(--weight-light);
+    line-height: 1.68;
     letter-spacing: 0.005em;
 }
 
 .projectSynopsisCol {
     display: flex;
     flex-direction: column;
-    gap: 0.9em;
+    gap: var(--space-sm);
 }
 
 .synopsisLabel {
-    font-size: 0.85rem;
-    font-weight: 700;
+    font-size: var(--font-sm);
+    font-weight: var(--weight-heavy);
     color: var(--pale);
     letter-spacing: 0;
 }
 
 .synopsisText {
-    font-size: 1.04rem;
+    font-size: var(--font-md);
     color: var(--pale);
-    font-weight: 300;
-    line-height: 1.74;
+    font-weight: var(--weight-light);
+    line-height: 1.68;
     letter-spacing: 0.005em;
 }
 
 .synopsisText p {
-    margin: 0 0 1.2em 0;
-    font-size: 1.04rem;
+    margin: 0 0 var(--space-md) 0;
+    font-size: var(--font-md);
+    line-height: 1.68;
 }
 
 .synopsisText p:last-child {
     margin-bottom: 0;
 }
 
-
-.upArrow,
-.downArrow {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    background: transparent;
-    border: none;
-    width: 48px;
-    height: 48px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    opacity: 0.7;
-    transition: opacity 0.3s ease;
-    z-index: 8;
-    padding: 0;
+.titleSlash {
+    color: var(--orange1);
+    font-weight: var(--weight-light);
 }
 
-.upArrow:hover,
-.downArrow:hover {
-    opacity: 1;
-}
-
-.upArrow .arrowLine {
-    width: 2px;
-    height: 32px;
-    background: var(--pale);
-    position: relative;
-}
-
-.upArrow .arrowLine::before,
-.upArrow .arrowLine::after {
-    content: '';
-    position: absolute;
-    width: 14px;
-    height: 2px;
-    background: var(--pale);
-    top: 0;
-}
-
-.upArrow .arrowLine::before {
-    left: -6px;
-    transform: rotate(45deg);
-    transform-origin: right center;
-}
-
-.upArrow .arrowLine::after {
-    right: -6px;
-    transform: rotate(-45deg);
-    transform-origin: left center;
-}
-
-.downArrow .arrowLine {
-    width: 2px;
-    height: 32px;
-    background: var(--pale);
-    position: relative;
-}
-
-.downArrow .arrowLine::before,
-.downArrow .arrowLine::after {
-    content: '';
-    position: absolute;
-    width: 14px;
-    height: 2px;
-    background: var(--pale);
-    bottom: 0;
-}
-
-.downArrow .arrowLine::before {
-    left: -6px;
-    transform: rotate(-45deg);
-    transform-origin: right center;
-}
-
-.downArrow .arrowLine::after {
-    right: -6px;
-    transform: rotate(45deg);
-    transform-origin: left center;
-}
-
-.upArrow {
-    bottom: -8vh;
-}
-
-.downArrow {
-    bottom: -8vh;
-}
-
-/* Tablet */
+/* Responsive - SIDEPANEL FRIENDLY */
 @media (max-width: 1200px) {
     .aboutGrid {
         padding-left: 18vw;
         padding-right: 5vw;
+    }
+
+    .aboutOverlay {
+        width: 65vw;
     }
 
     .projectTitle {
@@ -406,47 +384,32 @@ p {
         gap: 3vw;
     }
 
-    .headerTop {
-        flex-direction: column;
-        gap: 1em;
-    }
-
     .projectLinks {
-        flex-direction: row;
-        align-items: flex-start;
-        gap: 1em;
-    }
-
-    .upArrow,
-    .downArrow {
-        width: 40px;
-        height: 40px;
-    }
-
-    .upArrow .arrowLine,
-    .downArrow .arrowLine {
-        height: 28px;
+        justify-content: flex-start;
     }
 }
 
 @media (max-width: 1000px) {
+    :root {
+        --font-sm: 0.8rem;
+        --font-md: 1rem;
+        --font-lg: 1.2rem;
+    }
+
     .aboutGrid {
         padding: 0 4vw;
     }
 
     .aboutOverlay {
-        padding: 4vw 4vw;
+        width: 100%;
+        padding: 4vw;
         max-height: none;
         overflow-y: visible;
         box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
     }
 
-    .aboutOverlay::before {
-        width: 16vw;
-    }
-
     .projectTitle {
-        font-size: 1.2rem;
+        font-size: 1.3rem;
     }
 
     .projectMeta {
@@ -458,40 +421,61 @@ p {
         font-size: 0.7rem;
     }
 
-    .loglineText {
-        font-size: 1rem;
-        line-height: 1.7;
-    }
-
-    .synopsisText {
-        font-size: 1rem;
-        line-height: 1.7;
-    }
-
-    .upArrow,
-    .downArrow {
-        width: 38px;
-        height: 38px;
-    }
-
-    .upArrow .arrowLine,
-    .downArrow .arrowLine {
-        height: 26px;
-    }
-
-    .upArrow {
-        bottom: -45px;
-    }
-
-    .downArrow {
-        bottom: -100px;
+    p {
+        line-height: 1.65;
     }
 }
 
-/* Mobile */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     .bgSection {
-        padding: 6vh 0 80px 0;
+        padding-top: 6vh;
+        padding-bottom: 18vh;
+    }
+
+    .headerSection {
+        margin-bottom: var(--space-md);
+        padding-bottom: var(--space-md);
+    }
+
+    .storyLabHeading {
+        font-size: 1.3rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .headingNum {
+        font-size: 0.7em;
+    }
+
+    .headingMain {
+        font-size: 1em;
+    }
+
+    .labDescription p {
+        font-size: 1rem;
+        line-height: 1.55;
+    }
+
+    .projectTitle {
+        font-size: 1.2rem;
+    }
+
+    .aboutContentBlock {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    :root {
+        --font-sm: 0.75rem;
+        --font-md: 0.95rem;
+        --font-lg: 1.1rem;
+        --space-sm: 0.6rem;
+        --space-md: 1.2rem;
+        --space-lg: 2rem;
+    }
+
+    .bgSection {
+        padding: 5vh 0 15vh 0;
     }
 
     .aboutGrid {
@@ -499,16 +483,26 @@ p {
     }
 
     .aboutOverlay {
+        width: 100%;
         padding: 5vw 4vw;
         border-radius: 0.16em;
         border-right: none;
-        max-height: none;
-        overflow-y: visible;
         box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
     }
 
-    .aboutOverlay::before {
-        width: 18vw;
+    .headerSection {
+        margin-bottom: 1.5rem;
+        padding-bottom: 1.5rem;
+    }
+
+    .storyLabHeading {
+        font-size: 1.2rem;
+        margin-bottom: 0.7rem;
+    }
+
+    .labDescription p {
+        font-size: 0.95rem;
+        line-height: 1.52;
     }
 
     .projectTitle {
@@ -525,82 +519,65 @@ p {
     }
 
     .projectHeaderBlock {
-        margin-bottom: 2em;
+        margin-bottom: 1.5em;
     }
 
     .projectHeaderBlock::after {
-        margin-top: 1.2em;
-    }
-
-    .headerTop {
-        flex-direction: column;
-        gap: 0.8em;
+        margin-top: 1em;
     }
 
     .aboutContentBlock {
         grid-template-columns: 1fr;
-        gap: 2.5vw;
-        margin-top: 1.4em;
+        gap: 2vw;
     }
 
     .projectMainText {
-        gap: 1.2em;
-        font-size: 0.95rem;
+        gap: 1em;
     }
 
-    .loglineText {
-        font-size: 1rem;
-        line-height: 1.45;
-    }
-
-    .synopsisText {
-        font-size: 1rem;
-        line-height: 1.65;
-    }
-
-    .synopsisText p {
-        font-size: 1rem;
+    p {
+        line-height: 1.58;
     }
 
     .tag {
         font-size: 0.75em;
         padding: 0.3em 0.8em;
     }
-
-    .upArrow,
-    .downArrow {
-        width: 36px;
-        height: 36px;
-    }
-
-    .upArrow .arrowLine,
-    .downArrow .arrowLine {
-        height: 24px;
-    }
-
-    .upArrow {
-        bottom: -42px;
-    }
-
-    .downArrow {
-        bottom: -92px;
-    }
 }
 
 @media (max-width: 500px) {
+    :root {
+        --font-sm: 0.7rem;
+        --font-md: 0.9rem;
+        --font-lg: 1rem;
+        --space-sm: 0.5rem;
+        --space-md: 1rem;
+        --space-lg: 1.5rem;
+    }
+
     .bgSection {
-        padding: 6vh 0 70px 0;
+        padding: 4vh 0 12vh 0;
     }
 
     .aboutOverlay {
-        padding: 6vw 4vw;
-        border-radius: 0.16em;
-        border-right: none;
-        width: 45vh;
+        padding: 5vw 4vw;
+        margin-top: 10vh;
+        margin-bottom: 10vh;
     }
 
-    .aboutOverlay::before {
-        width: 20vw;
+    .headerSection {
+        margin-bottom: 1.2rem;
+        padding-bottom: 1.2rem;
+    }
+
+    .storyLabHeading {
+        font-size: 1rem;
+        margin-bottom: 0.6rem;
+    }
+
+    .labDescription p {
+        font-size: 0.9rem;
+        line-height: 1.48;
     }
 
     .projectTitle {
@@ -616,59 +593,25 @@ p {
         gap: 0.7em;
     }
 
-    .loglineText {
-        font-size: 0.9rem;
-    }
-
     .synopsisLabel {
-        font-size: 0.75rem;
         display: none !important;
     }
 
     .synopsisText {
-        font-size: 0.95rem;
-        line-height: 1.6;
         display: none !important;
     }
 
-    .synopsisText p {
-        font-size: 0.95rem;
-        display: none !important;
-    }
-
-    .upArrow,
-    .downArrow {
-        width: 34px;
-        height: 34px;
-    }
-
-    .upArrow .arrowLine,
-    .downArrow .arrowLine {
-        height: 22px;
-    }
-
-    .upArrow {
-        bottom: -38px;
-    }
-
-    .downArrow {
-        bottom: -88px;
+    p {
+        line-height: 1.48;
     }
 }
 
 @media (max-width: 330px) {
-    .projectTitle {
+    .storyLabHeading {
         font-size: 0.9rem;
     }
 
-    .upArrow,
-    .downArrow {
-        width: 32px;
-        height: 32px;
-    }
-
-    .upArrow .arrowLine,
-    .downArrow .arrowLine {
-        height: 20px;
+    .labDescription p {
+        font-size: 0.85rem;
     }
 }

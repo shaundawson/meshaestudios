@@ -4,6 +4,21 @@
     --orange1: #cc5500;
     --gray: #6b6b6b;
     --pale: #fafafa;
+
+    /* Typography Scale: Small, Medium, Large */
+    --font-sm: 0.85rem;
+    --font-md: 1rem;
+    --font-lg: 1em;
+
+    /* Font Weights: Light, Medium, Heavy */
+    --weight-light: 300;
+    --weight-medium: 400;
+    --weight-heavy: 500;
+
+    /* Spacing Scale: Small, Medium, Large */
+    --space-sm: 0.75rem;
+    --space-md: 1.5rem;
+    --space-lg: 2.5rem;
 }
 
 html,
@@ -20,58 +35,69 @@ body {
     min-height: 100vh;
     width: 100%;
     margin: 0;
-    padding: 18vh 5vw 15vh 3vw;
+    padding: 15vh 5vw 15vh 20vw;
     box-sizing: border-box;
 }
 
-.headerAndDesc,
-.masonryGallery {
-    max-width: 75vw;
-    padding-left: 24px;
-    margin: 0 auto;
-    padding-right: 0;
+/* Header Card - First Item in Masonry */
+.headerCard {
+    background: linear-gradient(135deg, rgba(60, 40, 20, 0.70) 0%, rgba(30, 20, 10, 0.88) 100%);
+    border-radius: 0.18em;
+    color: var(--pale);
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.25);
+    border-right: 2px solid var(--orange1);
+    border-bottom: 1px solid rgba(204, 85, 0, 0.15);
+    padding: 3vh 3vw;
+    margin-bottom: 24px;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    break-inside: avoid;
 }
 
-.headerAndDesc {
-    margin-bottom: 2.2rem;
+.headerCardContent {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
 }
 
 .designLabHeading {
     display: flex;
     align-items: center;
-    gap: 0.3em;
-    margin-bottom: 1.1rem;
+    gap: 0.4em;
+    margin-bottom: var(--space-md);
+    margin-top: 0;
 }
 
 .headingNum {
-    font-size: 0.7em;
+    font-size: 0.75em;
     color: var(--orange1);
-    font-weight: 400;
-    margin-right: 0.23em;
+    font-weight: var(--weight-heavy);
+    margin-right: 0.3em;
 }
 
 .headingMain {
     font-size: 1em;
     font-weight: 500;
     color: var(--pale);
-    letter-spacing: -0.01em;
+    letter-spacing: -0.02em;
 }
 
 .labDescription p {
-    margin: 0 0 1.15rem 0;
-    font-size: 1.14rem;
-    line-height: 1.47;
-    font-weight: 400;
-    letter-spacing: .005em;
-    width: 75vw;
+    margin: 0;
+    font-size: var(--font-md);
+    line-height: 1.65;
+    font-weight: var(--weight-light);
+    letter-spacing: .008em;
     color: var(--pale);
-    opacity: 1;
+    opacity: 0.96;
 }
 
-/* Gallery grid */
+/* Gallery Grid */
 .masonryGallery {
     column-count: 4;
     column-gap: 24px;
+    width: 70vw;
 }
 
 .masonryCard {
@@ -87,6 +113,7 @@ body {
     box-sizing: border-box;
     overflow: hidden;
     transition: all 0.3s ease;
+    break-inside: avoid;
 }
 
 .masonryCard:hover {
@@ -117,7 +144,7 @@ body {
 
 .cardTitle {
     font-family: 'Akzidenz-Grotesk', Arial, Helvetica, sans-serif;
-    font-weight: 300;
+    font-weight: var(--weight-light);
     font-size: 1.1rem;
     margin-bottom: 8px;
     color: var(--pale);
@@ -127,13 +154,14 @@ body {
 
 .cardDescription {
     color: var(--pale);
-    font-size: 0.85rem;
+    font-size: var(--font-sm);
     line-height: 1.5;
-    font-weight: 300;
+    font-weight: var(--weight-light);
     opacity: 0.85;
     letter-spacing: 0;
 }
 
+/* Modal Styles */
 .modalOverlay {
     position: fixed;
     z-index: 2000;
@@ -194,7 +222,7 @@ body {
 .modalCaption .cardTitle {
     color: var(--pale);
     font-size: 1.5rem;
-    font-weight: 300;
+    font-weight: var(--weight-light);
     margin-bottom: 10px;
     text-shadow: none;
     letter-spacing: -0.02em;
@@ -204,7 +232,7 @@ body {
 .modalCaption .cardDescription {
     color: var(--pale);
     font-size: 1rem;
-    font-weight: 300;
+    font-weight: var(--weight-light);
     text-shadow: none;
     opacity: 0.9;
     line-height: 1.6;
@@ -230,7 +258,7 @@ body {
     color: var(--pale);
     border: 1px solid rgba(250, 250, 250, 0.3);
     font-size: 0.75rem;
-    font-weight: 500;
+    font-weight: var(--weight-medium);
     padding: 0.7em 2em;
     border-radius: 0;
     box-shadow: none;
@@ -260,23 +288,36 @@ body {
     color: var(--dark1);
 }
 
-@media (max-width: 1100px) {
-
-    .headerAndDesc,
+/* Responsive Breakpoints */
+@media (max-width: 1200px) {
     .masonryGallery {
-        max-width: 94vw;
-        padding-left: 20px;
+        width: 85vw;
+        column-count: 3;
+        column-gap: 20px;
     }
+}
 
+@media (max-width: 1100px) {
     .masonryGallery {
+        width: 90vw;
         column-count: 2;
         column-gap: 20px;
     }
 }
 
 @media (max-width: 900px) {
-    .headerAndDesc {
-        margin-bottom: 2rem;
+    :root {
+        --font-sm: 0.8rem;
+        --font-md: 1rem;
+        --font-lg: 1.3rem;
+    }
+
+    .galleryBG {
+        padding: 12vh 4vw 15vh 4vw;
+    }
+
+    .headerCard {
+        padding: 4vw 4vw;
     }
 
     .designLabHeading {
@@ -294,24 +335,34 @@ body {
 
     .labDescription p {
         font-size: 1.08rem;
-        line-height: 1.5;
-        margin-bottom: 1rem;
+        line-height: 1.58;
     }
 }
 
 @media (max-width: 768px) {
-    .designLabHeading {
-        font-size: 1.4rem;
-        margin-bottom: 1rem;
+    :root {
+        --font-sm: 0.75rem;
+        --font-md: 0.95rem;
+        --font-lg: 1.1rem;
+        --space-sm: 0.6rem;
+        --space-md: 1.2rem;
+        --space-lg: 2rem;
     }
 
-    .labDescription p {
-        font-size: 1.05rem;
-        margin-bottom: 1rem;
+    .galleryBG {
+        padding: 12vh 3vw 15vh 3vw;
     }
-}
 
-@media (max-width: 600px) {
+    .headerCard {
+        padding: 5vw 3vw;
+    }
+
+    .masonryGallery {
+        width: 90vw;
+        column-count: 2;
+        column-gap: 0;
+    }
+
     .designLabHeading {
         font-size: 1.3rem;
         margin-bottom: 1rem;
@@ -319,20 +370,45 @@ body {
 
     .labDescription p {
         font-size: 1rem;
-        line-height: 1.45;
-        margin-bottom: 0.9rem;
+        line-height: 1.55;
+    }
+}
+
+@media (max-width: 600px) {
+    .masonryGallery {
+        width: 90vw;
+        column-count: 2;
+        column-gap: 2vh;
+    }
+
+    .designLabHeading {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+    }
+
+    .labDescription p {
+        font-size: 1rem;
+        line-height: 1.52;
     }
 }
 
 @media (max-width: 390px) {
+    :root {
+        --font-sm: 0.7rem;
+        --font-md: 0.9rem;
+        --font-lg: 1rem;
+        --space-sm: 0.5rem;
+        --space-md: 1rem;
+        --space-lg: 1.5rem;
+    }
+
     .designLabHeading {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
         margin-bottom: 0.9rem;
     }
 
     .labDescription p {
         font-size: 0.98rem;
-        line-height: 1.42;
-        margin-bottom: 0.8rem;
+        line-height: 1.52;
     }
 }

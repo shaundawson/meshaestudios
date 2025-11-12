@@ -46,7 +46,7 @@ export default function Hamburger() {
                     </Link>
                 </div>
 
-                {/* Tagline - multi-line with bold move/culture */}
+                {/* Tagline with highlighted move/culture */}
                 <div className={styles.missionBlock}>
                     <div className={styles.missionText}>
                         shaping stories<br />

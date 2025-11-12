@@ -6,10 +6,6 @@ export default function Story_Lab() {
     const sectionRefs = useRef([]);
     const [activeBgIdx, setActiveBgIdx] = useState(0);
 
-    const scrollToProject = idx => {
-        sectionRefs.current[idx]?.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    };
-
     useEffect(() => {
         const handleScroll = () => {
             projects.forEach((project, idx) => {
@@ -52,18 +48,115 @@ export default function Story_Lab() {
                 }}
                 aria-hidden="true"
             />
-
             <main className={styles.contentWrapper}>
-                {projects.map((project, idx) => (
+                {/* First Project with Header Prepended */}
+                <section
+                    ref={el => sectionRefs.current[0] = el}
+                    className={styles.bgSection}
+                >
+                    <div className={styles.aboutGrid}>
+                        <div className={styles.aboutOverlay}>
+                            {/* Header Section */}
+                            <div className={styles.headerSection}>
+                                <h2 className={styles.storyLabHeading}>
+                                    <span className={styles.headingNum}>04</span>
+                                    <span className={styles.headingMain}>story lab</span>
+                                </h2>
+                                <div className={styles.labDescription}>
+                                    <p>
+                                        The Story Lab at Meshae Studios curates all of our original films, documentaries, and video-driven projects in production. Discover stories of justice, identity, and transformation—each crafted by our creative team to inspire, inform, and move culture forward. Explore what we're developing now, from feature-length films to web series and unscripted narratives capturing the pulse of social change.
+                                    </p>
+                                </div>
+                            </div>
+
+                            {/* First Project Content */}
+                            <div className={styles.projectHeaderBlock}>
+                                <h1 className={styles.projectTitle}>
+                                    <span className={styles.titleSlash}>/ </span>
+                                    {projects[0].title}
+                                </h1>
+                                <div className={styles.projectMeta}>
+                                    {projects[0].genre}
+                                    {projects[0].length && ` / ${projects[0].length}`}
+                                    {projects[0].rating && ` / ${projects[0].rating}`}
+                                </div>
+                                <div className={styles.projectLinks}>
+                                    {projects[0].website && (
+                                        <a
+                                            href={projects[0].website}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className={styles.projectSite}
+                                        >
+                                            website
+                                        </a>
+                                    )}
+                                    {projects[0].imdb && (
+                                        <a
+                                            href={projects[0].imdb}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className={styles.projectImdb}
+                                        >
+                                            imdb
+                                        </a>
+                                    )}
+                                    {projects[0].instagram && (
+                                        <a
+                                            href={projects[0].instagram}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className={styles.projectInstagram}
+                                        >
+                                            instagram
+                                        </a>
+                                    )}
+                                </div>
+                            </div>
+                            <div className={styles.aboutContentBlock}>
+                                <div className={styles.projectMainText}>
+                                    <div className={styles.projectStatus}>
+                                        <span>status:</span> {projects[0].status || 'development'}
+                                    </div>
+                                    <div className={styles.logline}>
+                                        <span>logline:</span> {projects[0].logline}
+                                    </div>
+                                    <div className={styles.projectTags}>
+                                        {projects[0].tags && projects[0].tags.map(tag =>
+                                            <span className={styles.tag} key={tag}>{tag}</span>
+                                        )}
+                                    </div>
+                                </div>
+                                <div className={styles.projectSynopsisCol}>
+                                    <div className={styles.synopsisLabel}>synopsis</div>
+                                    <div className={styles.synopsisText}>
+                                        {Array.isArray(projects[0].synopsis)
+                                            ? projects[0].synopsis.map((para, i) => (
+                                                <p key={i}>{para}</p>
+                                            ))
+                                            : <p>{projects[0].synopsis}</p>
+                                        }
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                {/* Remaining Projects */}
+                {projects.slice(1).map((project, idx) => (
                     <section
-                        key={project.title + '-' + idx}
-                        ref={el => sectionRefs.current[idx] = el}
+                        key={project.title + '-' + (idx + 1)}
+                        ref={el => sectionRefs.current[idx + 1] = el}
                         className={styles.bgSection}
                     >
                         <div className={styles.aboutGrid}>
                             <div className={styles.aboutOverlay}>
                                 <div className={styles.projectHeaderBlock}>
-                                    <h1 className={styles.projectTitle}>{project.title}</h1>
+                                    <h1 className={styles.projectTitle}>
+                                        <span className={styles.titleSlash}>/ </span>
+                                        {project.title}
+                                    </h1>
                                     <div className={styles.projectMeta}>
                                         {project.genre}
                                         {project.length && ` / ${project.length}`}
@@ -128,30 +221,6 @@ export default function Story_Lab() {
                                         </div>
                                     </div>
                                 </div>
-
-                                {/* Up Arrow: Only if NOT first */}
-                                {idx > 0 && (
-                                    <button
-                                        className={styles.upArrow}
-                                        onClick={() => scrollToProject(idx - 1)}
-                                        aria-label="Previous project"
-                                        type="button"
-                                    >
-                                        <span className={styles.arrowIcon}>▲</span>
-                                    </button>
-                                )}
-
-                                {/* Down Arrow: Only if NOT last */}
-                                {idx < projects.length - 1 && (
-                                    <button
-                                        className={styles.downArrow}
-                                        onClick={() => scrollToProject(idx + 1)}
-                                        aria-label="Next project"
-                                        type="button"
-                                    >
-                                        <span className={styles.arrowIcon}>▼</span>
-                                    </button>
-                                )}
                             </div>
                         </div>
                     </section>

@@ -44,6 +44,24 @@ const Gallery = () => {
     return (
         <>
             <div className={styles.masonryGallery}>
+                {/* Header Card as First Item */}
+                <div className={styles.headerCard}>
+                    <div className={styles.headerCardContent}>
+                        <h1 className={styles.designLabHeading}>
+                            <span className={styles.headingNum}>03</span>
+                            <span className={styles.headingMain}>design lab</span>
+                        </h1>
+                        <div className={styles.labDescription}>
+                            <p>
+                                The Design Lab at Meshae Studios is where visual storytelling meets innovative technology.
+                                We create digital branding, culture-driven campaigns, and gallery showcases for justice-minded creatives, founders, and brands.
+                                Here you'll find projects that merge minimal design, cinematic aesthetics, and purposeful strategy.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                {/* Gallery Cards */}
                 {displayPins.map((pin, idx) => (
                     <div
                         key={idx + '-' + pin.title}
@@ -64,6 +82,8 @@ const Gallery = () => {
                     </div>
                 ))}
             </div>
+
+            {/* Modal */}
             {modalImage && (
                 <div
                     className={styles.modalOverlay}

@@ -6,10 +6,15 @@
     --gray: #6b6b6b;
     --pale: #fafafa;
 
-    --gap-small: 1.2rem;
-    --gap-medium: 2rem;
-    --gap-large: 3.5rem;
-    --gap-menu-items: 0.22rem;
+    /* SPACING HIERARCHY: Small, Medium, Large */
+    --gap-thin: 0.8rem;
+    --gap-small: 1.4rem;
+    --gap-medium: 2.2rem;
+    --gap-large: 3.8rem;
+    --gap-xlarge: 5rem;
+
+    /* Menu item spacing */
+    --gap-menu-items: 0.65rem;
 }
 
 .iconSidebarWrapper {
@@ -27,11 +32,10 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: .45rem;
+    gap: .5rem;
     padding: 1rem;
     z-index: 1400;
 }
-
 
 .menuLabelTop {
     font-size: 0.65rem;
@@ -40,7 +44,8 @@
     opacity: 0.75;
     font-family: 'Akzidenz-Grotesk', Helvetica, Arial, sans-serif;
     transition: opacity 0.18s;
-    font-weight: 400;
+    font-weight: 300;
+    text-transform: lowercase;
 }
 
 .hamburgerLine {
@@ -49,15 +54,28 @@
     transition: background 0.18s;
 }
 
-.lineShort,
-.lineMedium,
-.lineLong {
-    width: 2rem;
+.lineShort {
+    width: 1.6rem;
     height: 1px;
+    background: var(--pale) !important;
+}
+
+.lineMedium {
+    width: 2rem;
+    height: 1.5px;
+}
+
+.lineLong {
+    width: 2.4rem;
+    height: 2px;
 }
 
 .icon:hover .hamburgerLine {
     background: var(--orange1);
+}
+
+.icon:hover .lineShort {
+    background: var(--pale) !important;
 }
 
 .icon:hover .menuLabelTop {
@@ -76,13 +94,14 @@
     z-index: 1450;
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    height: 100vh;
     font-family: 'Akzidenz-Grotesk', Helvetica, Arial, sans-serif;
-    padding: 1rem 2.1rem 2rem 2.1rem;
+    padding: 2rem 2.1rem;
     transform: translateX(-100%);
     opacity: 0;
     pointer-events: none;
     transition: transform 0.35s cubic-bezier(.4, .13, .7, .89), opacity 0.16s cubic-bezier(.4, .13, .7, .89);
+    box-sizing: border-box;
 }
 
 .sidebar::before {
@@ -91,9 +110,9 @@
     left: 0;
     top: 0;
     height: 100%;
-    width: 3px;
-    background: var(--orange1);
-    opacity: 0.75;
+    width: 4px;
+    background: linear-gradient(to bottom, var(--orange1), var(--orange2));
+    opacity: 0.85;
 }
 
 .sidebar.open {
@@ -108,73 +127,87 @@
     color: var(--orange2);
     font-size: 1.25rem;
     cursor: pointer;
-    margin: 0.5rem 0 2.5rem auto;
+    margin: 0.5rem 0 1.8rem auto;
     padding: 0.3rem;
     opacity: 0.6;
     transition: opacity 0.18s, color 0.18s;
+    font-weight: 300;
 }
 
 .close:hover {
     opacity: 1;
+    color: var(--orange1);
 }
 
+/* BRAND BLOCK */
 .brandBlock {
-    padding-bottom: var(--gap-small);
+    padding-bottom: var(--gap-medium);
+    border-bottom: 1px solid rgba(107, 107, 107, 0.2);
+    flex-shrink: 0;
 }
 
 .brandTitle {
-    font-size: 1.5rem;
-    font-weight: 900;
-    letter-spacing: -0.01em;
-    line-height: 1.07;
+    font-size: 1.55rem;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
     margin: 0;
     display: flex;
-    gap: 0.35rem;
-    padding-top: 22vh;
+    gap: 0.45rem;
+    padding-top: 2vh;
 }
 
 .meshae {
     color: var(--dark2);
-    font-weight: 900;
+    font-weight: 600;
 }
 
 .studios {
     color: var(--orange1);
     font-weight: 300;
+    letter-spacing: 0.01em;
 }
 
+/* MISSION BLOCK - Key visual hierarchy */
 .missionBlock {
-    padding-bottom: var(--gap-large);
+    padding: var(--gap-medium) 0;
+    border-bottom: 2px solid var(--orange1);
+    flex-shrink: 0;
 }
 
 .missionText {
-    font-size: 1.12rem;
+    font-size: 1.08rem;
     font-weight: 300;
     color: var(--gray);
-    line-height: 1.21;
-    letter-spacing: 0.01em;
+    line-height: 1.54;
+    letter-spacing: 0.008em;
+    word-spacing: 0.1em;
 }
 
 .moveBold,
 .cultureBold {
-    font-weight: 900;
-    color: var(--gray);
+    font-weight: 600;
+    color: var(--orange1);
+    letter-spacing: -0.01em;
 }
 
+/* MENU SECTION */
 .menuSection {
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
-    margin-bottom: var(--gap-medium);
+    gap: 0.8rem;
+    margin: var(--gap-large) 0 var(--gap-medium) 0;
+    flex-shrink: 0;
 }
 
 .sectionLabel {
     color: var(--orange2);
-    font-size: 0.99rem;
+    font-size: 0.75rem;
     text-transform: lowercase;
-    letter-spacing: 0.09em;
-    opacity: 0.85;
-    font-weight: 200;
+    letter-spacing: 0.12em;
+    opacity: 0.7;
+    font-weight: 400;
+    word-spacing: 0.2em;
 }
 
 .menuNav {
@@ -187,46 +220,56 @@
 
 .menuItem {
     color: var(--gray);
-    font-size: 1.02rem;
+    font-size: 1rem;
     font-weight: 400;
     letter-spacing: 0.01em;
     text-decoration: none;
-    padding: 0.21em 0 0.07em 0;
+    padding: 0.38em 0;
     background: none;
     border: none;
     display: flex;
     align-items: baseline;
-    gap: 0.7rem;
+    gap: 1.1rem;
     font-family: inherit;
-    opacity: 0.98;
-    transition: color 0.2s;
+    opacity: 0.9;
+    transition: all 0.2s;
+    border-left: 2px solid transparent;
+    padding-left: 0.8rem;
 }
 
 .menuNumber {
-    font-size: 0.72rem;
-    font-weight: 500;
+    font-size: 0.68rem;
+    font-weight: 600;
     color: var(--orange2);
-    opacity: 0.6;
+    opacity: 0.65;
     min-width: 1.4rem;
+    transition: opacity 0.2s;
+    letter-spacing: 0.05em;
 }
 
 .menuText {
     flex: 1;
+    transition: color 0.2s;
 }
 
 .menuItem:hover,
 .menuItem:focus {
     color: var(--orange1);
+    border-left-color: var(--orange1);
+    opacity: 1;
 }
 
 .menuItem:hover .menuNumber {
     opacity: 1;
+    color: var(--orange1);
 }
 
+/* EXTERNAL GROUP */
 .externalGroup {
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 0.8rem;
+    flex-shrink: 0;
 }
 
 .externalLinks {
@@ -237,29 +280,38 @@
 
 .externalLink {
     color: var(--gray);
-    font-size: 1.02rem;
+    font-size: 0.98rem;
     text-decoration: none;
-    letter-spacing: 0.01em;
+    letter-spacing: 0.005em;
     font-family: inherit;
-    opacity: 0.96;
+    opacity: 0.85;
     font-weight: 400;
-    transition: color 0.17s;
+    transition: all 0.2s;
+    padding-bottom: 0.2em;
+    border-bottom: 1px solid transparent;
 }
 
 .externalLink:hover {
     color: var(--orange1);
+    border-bottom-color: var(--orange1);
+    opacity: 1;
 }
 
+/* FOOTER - Fully contained, no overflow */
 .footerBio {
-    width: 80%;
+    margin-top: auto;
+    padding-top: var(--gap-medium);
+    padding-bottom: var(--gap-small);
+    border-top: 2px solid var(--orange1);
     color: var(--gray);
-    font-size: 0.85rem;
+    font-size: 0.75rem;
     font-weight: 300;
     text-align: left;
-    line-height: 1.32;
-    margin-top: var(--gap-medium);
-    margin-bottom: var(--gap-large);
-    opacity: 0.93;
+    line-height: 1.58;
+    opacity: 0.88;
+    flex-shrink: 0;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .footerText {
@@ -268,18 +320,7 @@
     font-weight: inherit;
     line-height: inherit;
     opacity: inherit;
-}
-
-.gapSmall {
-    height: var(--gap-small);
-}
-
-.gapMedium {
-    height: var(--gap-medium);
-}
-
-.gapLarge {
-    height: var(--gap-large);
+    letter-spacing: 0.005em;
 }
 
 .flexGrow {
@@ -297,287 +338,344 @@
     cursor: pointer;
 }
 
-/* Mobile-first: Full screen sidebar below 900px */
+/* DESKTOP: Original 340px width */
+@media (min-width: 901px) {
+    .sidebar {
+        width: 340px;
+        overflow: hidden;
+    }
+}
+
+/* TABLET & IPAD: Full screen width */
 @media (max-width: 900px) {
+    :root {
+        --gap-thin: 1rem;
+        --gap-small: 1.6rem;
+        --gap-medium: 2.2rem;
+        --gap-large: 3.5rem;
+        --gap-xlarge: 4.5rem;
+        --gap-menu-items: 0.7rem;
+    }
+
     .icon {
-        top: 1.5rem;
-        right: 4vw;
+        top: 1.8rem;
+        right: 5vw;
         padding: 0.8rem;
-        gap: 0.4rem;
+        gap: 0.48rem;
     }
 
     .menuLabelTop {
-        font-size: 0.58rem;
-        letter-spacing: 0.12em;
+        font-size: 0.62rem;
+        letter-spacing: 0.14em;
     }
 
-    /* ALL LINES UNIFORM on mobile */
-    .lineShort,
-    .lineMedium,
-    .lineLong {
+    .lineShort {
         width: 1.8rem;
-        /* All identical */
-        height: 2px;
-        /* All identical */
+        height: 1px;
     }
 
-    /* FULL SCREEN TAKEOVER */
+    .lineMedium {
+        width: 2.2rem;
+        height: 1.5px;
+    }
+
+    .lineLong {
+        width: 2.6rem;
+        height: 2px;
+    }
+
     .sidebar {
         width: 100vw;
         max-width: 100vw;
-        background: var(--pale);
-        padding: 1.5rem 6vw 0 6vw;
-        /* No bottom padding */
-        overflow-y: auto;
-        -webkit-overflow-scrolling: touch;
+        height: 100vh;
+        padding: 2.2rem 8vw;
+        overflow: hidden;
+        box-sizing: border-box;
     }
 
-    /* Remove vertical orange line on mobile */
     .sidebar::before {
         display: none;
     }
 
-    /* Overlay becomes solid dark background */
     .overlay {
-        background: rgba(0, 0, 0, 0.3);
-    }
-
-    .close {
-        font-size: 2.2rem;
-        margin: 0 0 2rem auto;
-        padding: 0.2rem 2rem;
-        color: var(--orange2);
-        opacity: 1;
-        font-weight: 100;
-        line-height: 1;
-    }
-
-    .close:hover {
-        color: var(--orange1);
-    }
-
-    .brandTitle {
-        font-size: 1.8rem;
-        padding-top: 2vh;
-    }
-
-    .missionText {
-        font-size: 1.08rem;
-    }
-
-    .menuSection {
-        margin-bottom: 1.8rem;
-    }
-
-    .sectionLabel {
-        font-size: 0.95rem;
-    }
-
-    .menuItem {
-        font-size: 1.05rem;
-        padding: 0.3em 0;
-    }
-
-    .menuNumber {
-        font-size: 0.75rem;
-    }
-
-    .externalGroup {
-        gap: 0.7rem;
-        margin-bottom: 2.5rem;
-        /* Space before footer */
-    }
-
-    .externalLink {
-        font-size: 1.05rem;
-    }
-
-    /* SWISS POSTER FOOTER WITH LINES */
-    .footerBio {
-        width: 80vw;
-        max-width: 80vw;
-
-    }
-
-    .footerText {
-        color: var(--gray);
-        font-size: 0.82rem;
-        font-weight: 300;
-        line-height: 1.42;
-        letter-spacing: 0.01em;
-        opacity: 0.95;
-        padding: 1.5vh 7vw;
-    }
-
-    .gapLarge {
-        height: 2.8rem;
-    }
-
-    .gapMedium {
-        height: 1.6rem;
-    }
-
-    .gapSmall {
-        height: 1rem;
-    }
-}
-
-/* Small mobile refinements (iPhone) */
-@media (max-width: 600px) {
-    .icon {
-        top: 1.2rem;
-        right: 3.5vw;
-        padding: 0.7rem;
-    }
-
-    .menuLabelTop {
-        font-size: 0.52rem;
-    }
-
-    /* ALL LINES UNIFORM on small mobile */
-    .lineShort,
-    .lineMedium,
-    .lineLong {
-        width: 1.6rem;
-
-        height: 1.5px;
-
-    }
-
-    .sidebar {
-        padding: 1.2rem 5vw 0 5vw;
+        background: rgba(0, 0, 0, 0.35);
     }
 
     .close {
         font-size: 2rem;
-        margin: 0 0 1.5rem auto;
+        margin: 0.5rem 0 2.2rem auto;
+        padding: 0.2rem 1.5rem;
+    }
+
+    .brandBlock {
+        padding-bottom: var(--gap-medium);
     }
 
     .brandTitle {
-        font-size: 1.6rem;
-        padding-top: 1.5vh;
+        font-size: 1.8rem;
+        padding-top: 2rem;
+    }
+
+    .missionBlock {
+        padding: var(--gap-medium) 0;
     }
 
     .missionText {
-        font-size: 1rem;
+        font-size: 1.12rem;
+        line-height: 1.54;
+    }
+
+    .menuSection {
+        margin: var(--gap-large) 0 var(--gap-medium) 0;
+    }
+
+    .sectionLabel {
+        font-size: 0.78rem;
+        letter-spacing: 0.13em;
     }
 
     .menuItem {
-        font-size: 1rem;
+        font-size: 1.1rem;
+        padding: 0.42em 0;
+        border-left: 2px solid transparent;
+        padding-left: 1rem;
+        gap: 1.3rem;
     }
 
     .menuNumber {
         font-size: 0.7rem;
     }
 
-    .sectionLabel {
-        font-size: 0.9rem;
+    .externalGroup {
+        margin-bottom: 1.5rem;
+    }
+
+    .externalLinks {
+        gap: var(--gap-small);
     }
 
     .externalLink {
-        font-size: 1rem;
+        font-size: 1.05rem;
     }
 
     .footerBio {
-        margin-left: -5vw;
-        margin-right: -5vw;
-        border-top: 1.5px solid var(--orange1);
-        border-bottom: 1.5px solid var(--orange1);
+        margin-top: auto;
+        padding-top: var(--gap-small);
+        padding-bottom: var(--gap-small);
+        border-top: 2px solid var(--orange1);
+        font-size: 0.82rem;
+        line-height: 1.54;
+        width: 100%;
+        box-sizing: border-box;
     }
 
     .footerText {
-        font-size: 0.78rem;
-        line-height: 1.45;
-        padding: 3vh 5vw;
-    }
-
-    .gapLarge {
-        height: 2.5rem;
-    }
-
-    .gapMedium {
-        height: 1.4rem;
+        font-size: inherit;
+        line-height: inherit;
     }
 }
 
-/* Very small mobile (iPhone SE) */
-@media (max-width: 390px) {
+/* SMALL MOBILE (600px - 900px already covered above) */
+@media (max-width: 600px) {
+    :root {
+        --gap-thin: 0.75rem;
+        --gap-small: 1.2rem;
+        --gap-medium: 1.8rem;
+        --gap-large: 2.8rem;
+        --gap-xlarge: 3.5rem;
+        --gap-menu-items: 0.6rem;
+    }
+
     .icon {
-        top: 1rem;
-        right: 3vw;
-        padding: 0.6rem;
+        top: 1.6rem;
+        right: 4.5vw;
+        padding: 0.7rem;
+        gap: 0.45rem;
     }
 
     .menuLabelTop {
-        font-size: 0.48rem;
+        font-size: 0.58rem;
+        letter-spacing: 0.13em;
     }
 
-    /* ALL LINES UNIFORM on very small mobile */
-    .lineShort,
-    .lineMedium,
-    .lineLong {
-        width: 1.5rem;
-        /* All identical */
+    .lineShort {
+        width: 1.7rem;
+        height: 1px;
+    }
+
+    .lineMedium {
+        width: 2.1rem;
         height: 1.5px;
-        /* All identical */
+    }
+
+    .lineLong {
+        width: 2.5rem;
+        height: 2px;
     }
 
     .sidebar {
-        padding: 1rem 4.5vw 0 4.5vw;
+        padding: 1.8rem 5vw;
+        overflow: hidden;
+        box-sizing: border-box;
     }
 
     .close {
-        font-size: 1.9rem;
-        margin: 0 0 1.2rem auto;
+        font-size: 1.8rem;
+        margin: 0.3rem 0 1.5rem auto;
     }
 
     .brandTitle {
-        font-size: 1.45rem;
-        padding-top: 1vh;
+        font-size: 1.5rem;
+        padding-top: 1rem;
     }
 
     .missionText {
-        font-size: 0.95rem;
+        font-size: 1rem;
+        line-height: 1.48;
+    }
+
+    .menuSection {
+        margin: var(--gap-large) 0 var(--gap-medium) 0;
+    }
+
+    .sectionLabel {
+        font-size: 0.7rem;
     }
 
     .menuItem {
         font-size: 0.98rem;
-        padding: 0.25em 0;
+        padding: 0.35em 0;
+        padding-left: 0.8rem;
+        gap: 1rem;
     }
 
     .menuNumber {
-        font-size: 0.68rem;
+        font-size: 0.64rem;
     }
 
-    .sectionLabel {
-        font-size: 0.85rem;
+    .externalGroup {
+        margin-bottom: 1rem;
     }
 
     .externalLink {
-        font-size: 0.98rem;
+        font-size: 0.96rem;
     }
 
     .footerBio {
-        margin-left: -4.5vw;
-        margin-right: -4.5vw;
+        margin-top: auto;
+        padding-top: 0.7rem;
+        padding-bottom: 0.7rem;
         border-top: 1px solid var(--orange1);
-        border-bottom: 1px solid var(--orange1);
+        font-size: 0.72rem;
+        line-height: 1.46;
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
+
+/* EXTRA SMALL MOBILE - iPhone SE (390px and below) */
+@media (max-width: 430px) {
+    :root {
+        --gap-thin: 0.65rem;
+        --gap-small: 1rem;
+        --gap-medium: 1.4rem;
+        --gap-large: 2.2rem;
+        --gap-xlarge: 2.8rem;
+        --gap-menu-items: 0.5rem;
+    }
+
+    .icon {
+        top: 1.3rem;
+        right: 4vw;
+        padding: 0.5rem;
+        gap: 0.38rem;
+    }
+
+    .menuLabelTop {
+        font-size: 0.52rem;
+        letter-spacing: 0.12em;
+    }
+
+    .lineShort {
+        width: 1.5rem;
+        height: 1px;
+    }
+
+    .lineMedium {
+        width: 1.9rem;
+        height: 1.5px;
+    }
+
+    .lineLong {
+        width: 2.2rem;
+        height: 1.5px;
+    }
+
+    .sidebar {
+        padding: 1.4rem 4.5vw;
+        overflow: hidden;
+        box-sizing: border-box;
+    }
+
+    .close {
+        font-size: 1.6rem;
+        margin: 0.2rem 0 1.2rem auto;
+    }
+
+    .brandTitle {
+        font-size: 1.3rem;
+        padding-top: 0.8rem;
+    }
+
+    .missionBlock {
+        padding: var(--gap-medium) 0;
+    }
+
+    .missionText {
+        font-size: 0.92rem;
+        line-height: 1.44;
+    }
+
+    .menuSection {
+        margin: var(--gap-large) 0 var(--gap-medium) 0;
+    }
+
+    .sectionLabel {
+        font-size: 0.65rem;
+    }
+
+    .menuItem {
+        font-size: 0.93rem;
+        padding: 0.3em 0;
+        padding-left: 0.7rem;
+        gap: 0.9rem;
+    }
+
+    .menuNumber {
+        font-size: 0.6rem;
+    }
+
+    .externalGroup {
+        margin-bottom: 0.8rem;
+    }
+
+    .externalLink {
+        font-size: 0.9rem;
+    }
+
+    .footerBio {
+        margin-top: auto;
+        padding-top: 0.6rem;
+        padding-bottom: 0.6rem;
+        border-top: 1px solid var(--orange1);
+        font-size: 0.68rem;
+        line-height: 1.42;
+        width: 100%;
+        box-sizing: border-box;
     }
 
     .footerText {
-        font-size: 0.75rem;
-        line-height: 1.48;
-        padding-top: 2.5vh;
-        padding-right: 1.5vw;
-        padding-bottom: 2.5vh;
-        padding-left: 3.5vw;
-    }
-
-    .gapLarge {
-        height: 2.2rem;
-    }
-
-    .gapMedium {
-        height: 1.2rem;
+        font-size: inherit;
+        line-height: inherit;
     }
 }

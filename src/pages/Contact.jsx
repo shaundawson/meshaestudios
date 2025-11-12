@@ -7,8 +7,13 @@ export default function Contact() {
         <main className={styles.contactHeroGrid}>
             <section className={styles.contactBlock}>
                 <div className={styles.headerSection}>
-                    <div className={styles.miniLabel}>get in touch</div>
-                    <h1 className={styles.heroHeader}>let's create<br />something.</h1>
+                    <h1 className={styles.contactHeading}>
+                        <span className={styles.headingNum}>05</span>
+                        <span className={styles.headingMain}>let's create something</span>
+                    </h1>
+                    <p className={styles.contactSubtext}>
+                        Whether you're a founder, creator, or movement builder, we're here to craft stories that challenge norms and move culture forward. Drop us a line and let's build something intentional together.
+                    </p>
                 </div>
                 <div className={styles.formPanel}>
                     <HubSpotForm

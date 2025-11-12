@@ -96,16 +96,16 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    padding-left: 22vw;
+    padding-left: 24vw;
     padding-right: 8vw;
     position: relative;
 }
 
 .aboutOverlay {
-    width: 50vw;
+    width: 70vw;
     max-height: 100vh;
     background: linear-gradient(135deg, rgba(60, 40, 20, 0.70) 0%, rgba(30, 20, 10, 0.88) 100%);
-    padding: 2.8vw 3vw;
+    padding: 1.5vw 1.5vw;
     border-radius: 0.18em;
     color: var(--pale);
     display: flex;
@@ -116,6 +116,7 @@
     border-bottom: 1px solid rgba(204, 85, 0, 0.15);
     box-shadow: 0 10px 42px rgba(0, 0, 0, 0.35);
     overflow-y: auto;
+    margin-top: 3vh;
 }
 
 .aboutOverlay::-webkit-scrollbar {

@@ -165,7 +165,7 @@ p {
 }
 
 #hubspotForm textarea.hs-input {
-  min-height: 8em !important;
+  min-height: 6em !important;
   line-height: 1.5 !important;
 }
 

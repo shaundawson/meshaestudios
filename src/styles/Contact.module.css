@@ -211,10 +211,10 @@
 
     .contactBlock {
         width: 80vw;
-        padding: 8vw 5vw 5vw 5vw;
+        padding: 15vw 7vw 7vw 7vw;
         gap: var(--space-lg);
         margin-right: 0;
-        margin-top: 4vh;
+        margin-top: 3vh;
     }
 
     .contactHeading {

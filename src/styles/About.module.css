@@ -346,8 +346,9 @@ p {
 
     .aboutOverlay {
         width: 96vw;
-        padding: 6vw 4vw;
+        padding: 4vw 4vw;
         border-right: none;
+        margin-top: -1vh;
     }
 
     .aboutOverlay::before {

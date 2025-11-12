@@ -307,7 +307,7 @@
     padding-bottom: var(--gap-small);
     border-top: 2px solid var(--orange1);
     color: var(--gray);
-    font-size: 0.75rem;
+    font-size: 0.85rem;
     font-weight: 300;
     text-align: left;
     line-height: 1.58;
@@ -675,7 +675,7 @@
         padding-top: 0.6rem;
         padding-bottom: 1rem;
         border-top: 1px solid var(--orange1);
-        font-size: 0.68rem;
+        font-size: 0.8rem;
         line-height: 1.42;
         width: 100%;
         box-sizing: border-box;

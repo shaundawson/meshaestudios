@@ -66,6 +66,7 @@
     gap: var(--space-lg);
     margin-right: 8vw;
     margin-top: 5vh;
+    margin-right: 28vw;
 }
 
 .headerSection {

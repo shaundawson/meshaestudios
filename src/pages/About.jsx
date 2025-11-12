@@ -13,19 +13,20 @@ export default function About() {
                     <div className={styles.aboutContentBlock}>
                         <div className={styles.aboutMainText}>
                             <p>
-                                Meshae Studios turns hidden truths into movements for change. We blend filmmaking with engineering and product strategy to build narratives that reach people and drive real results. Every project is crafted for intentional reach, combining artistic vision with technical precision and systematic measurement.
+                                Meshae Studios exists because stories matter. Real stories. The kind that expose what's been hidden and create space for something different to happen. We're filmmakers and engineers and strategists all rolled into one, which means we know how to build narratives that actually reach people and create measurable impact.
                             </p>
                             <p>
-                                Purpose driven organizations need more than a good story. They need partners who speak both creative and technical fluently. We work with filmmakers, nonprofits, and mission driven founders to craft work that's brave, rigorous, and built to land.
+                                Here's the thing: if you're doing work that matters, you need people in the room who get both sides. The artistry and the architecture. We work with filmmakers, nonprofits, and founders who refuse to settle for surface level. We help you make work that's thoughtful, rigorous, and designed to land. That's it. That's what we do.
                             </p>
                             <div className={styles.characteristicsBlock}>
-                                <span className={styles.characteristicsLabel}>characteristics</span>
+                                <span className={styles.characteristicsLabel}> what we do</span>
                                 <div className={styles.characteristics}>
                                     <span className={styles.tag}>visual storytelling</span>
                                     <span className={styles.tag}>documentary</span>
                                     <span className={styles.tag}>activism</span>
-                                    <span className={styles.tag}>collaboration</span>
-                                    <span className={styles.tag}>filmmaking</span>
+                                    <span className={styles.tag}>web design and development</span>
+                                    <span className={styles.tag}>web series</span>
+                                    <span className={styles.tag}>podcast</span>
                                     <span className={styles.tag}>creative direction</span>
                                     <span className={styles.tag}>technical consulting</span>
                                 </div>
@@ -33,7 +34,7 @@ export default function About() {
                         </div>
                         <div className={styles.aboutSideText}>
                             <p>
-                                Led by Shaun Dawson, a Black nonbinary filmmaker and engineer, Meshae Studios believes honest work changes culture. We're a team of storytellers, strategists, and builders committed to craft that matters. Every project is intentional, measured, and built to move things.
+                                Led by Shaun Dawson, a Black nonbinary filmmaker and engineer, we believe that craft is a form of respect. Every detail matters because the work matters. Every project gets our full attention, our full skill set, and our full commitment to make something that shifts things.
                             </p>
                         </div>
                     </div>

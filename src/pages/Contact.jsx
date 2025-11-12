@@ -12,7 +12,7 @@ export default function Contact() {
                         <span className={styles.headingMain}>let's create something</span>
                     </h1>
                     <p className={styles.contactSubtext}>
-                        Whether you're a founder, creator, or movement builder, we're here to craft stories that challenge norms and move culture forward. Drop us a line and let's build something intentional together.
+                        You're a founder. A creator. A movement builder. We work with people doing real work. Let's talk about what you're building and how we can help you do it right.
                     </p>
                 </div>
                 <div className={styles.formPanel}>

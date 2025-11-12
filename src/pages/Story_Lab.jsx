@@ -64,7 +64,7 @@ export default function Story_Lab() {
                                 </h2>
                                 <div className={styles.labDescription}>
                                     <p>
-                                        The Story Lab at Meshae Studios curates all of our original films, documentaries, and video-driven projects in production. Discover stories of justice, identity, and transformation—each crafted by our creative team to inspire, inform, and move culture forward. Explore what we're developing now, from feature-length films to web series and unscripted narratives capturing the pulse of social change.
+                                        This is the Story Lab. Everything we're making right now. Documentaries. Films. Video narratives about justice and identity and transformation. Work that inspires. Work that informs. Work that changes how people think. Whether it's a feature film, a web series, or something we're building in real time, it lives here. Come see what we're working on.
                                     </p>
                                 </div>
                             </div>

@@ -53,9 +53,7 @@ const Gallery = () => {
                         </h1>
                         <div className={styles.labDescription}>
                             <p>
-                                The Design Lab at Meshae Studios is where visual storytelling meets innovative technology.
-                                We create digital branding, culture-driven campaigns, and gallery showcases for justice-minded creatives, founders, and brands.
-                                Here you'll find projects that merge minimal design, cinematic aesthetics, and purposeful strategy.
+                                The Design Lab showcases our work. Web design. Development. Graphic design. Pitch decks. Everything we create lives here: digital experiences, visual systems, and the work that moves projects forward. Clean design. Strong strategy. Built to work.
                             </p>
                         </div>
                     </div>

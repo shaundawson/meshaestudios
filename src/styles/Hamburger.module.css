@@ -341,7 +341,7 @@
 /* DESKTOP: Original 340px width */
 @media (min-width: 901px) {
     .sidebar {
-        width: 340px;
+        width: 40vh;
         overflow: hidden;
     }
 }

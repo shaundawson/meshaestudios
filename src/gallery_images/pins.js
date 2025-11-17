@@ -5,12 +5,12 @@ export const pins = [
     //     title: 'Modernist Type',
     //     description: 'Swiss-style editorial layout with heavy type.'
     // },
-    // {
-    //     image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1400&q=80',
-    //     aspect: '16/9', // landscape
-    //     title: 'Branding Spread',
-    //     description: 'Collage branding concepts in muted palettes.'
-    // },
+    {
+        image: 'https://5688825.fs1.hubspotusercontent-na1.net/hubfs/5688825/iamsawson.com/PortfolioLandingPage.png',
+        aspect: '16/9', // landscape
+        title: ' iamsdawson.com',
+        description: 'Modern Portfolio Landing Page'
+    }
     // {
     //     image: 'https://images.unsplash.com/photo-1444065381814-865dc9da92c0?auto=format&fit=crop&w=450&q=80',
     //     aspect: '1/1', // square

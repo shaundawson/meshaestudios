@@ -35,10 +35,10 @@ const Gallery = () => {
         return () => window.removeEventListener('keydown', handleKey)
     }, [modalImage])
 
-    const handleShare = () => {
-        const linkUrl = window.location.origin + '/designlab?img=' + encodeURIComponent(modalImage.image);
-        navigator.clipboard.writeText(linkUrl);
-        alert('Link copied! You can now share it anywhere.');
+    const handleViewLive = () => {
+        if (modalImage?.website) {
+            window.open(modalImage.website, '_blank', 'noopener,noreferrer')
+        }
     }
 
     return (
@@ -106,12 +106,14 @@ const Gallery = () => {
                             >
                                 close
                             </button>
-                            <button
-                                className={styles.sharePill}
-                                onClick={handleShare}
-                            >
-                                share
-                            </button>
+                            {modalImage.website && (
+                                <button
+                                    className={styles.viewLivePill}
+                                    onClick={handleViewLive}
+                                >
+                                    view live
+                                </button>
+                            )}
                         </div>
                     </div>
                 </div>

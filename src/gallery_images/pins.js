@@ -8,8 +8,9 @@ export const pins = [
     {
         image: 'https://5688825.fs1.hubspotusercontent-na1.net/hubfs/5688825/iamsawson.com/PortfolioLandingPage.png',
         aspect: '16/9', // landscape
-        title: ' iamsdawson.com',
-        description: 'Modern Portfolio Landing Page'
+        title: ' Modern Portfolio Landing Page',
+        description: 'Minimalist landing page template with Swiss design principles. Built with Next.js 14, TypeScript, Tailwind CSS.',
+        website: 'https://www.iamsdawson.com'
     }
     // {
     //     image: 'https://images.unsplash.com/photo-1444065381814-865dc9da92c0?auto=format&fit=crop&w=450&q=80',

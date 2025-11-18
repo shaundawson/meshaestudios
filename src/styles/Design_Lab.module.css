@@ -270,10 +270,24 @@ body {
     text-transform: lowercase;
 }
 
-.sharePill {
+.viewLivePill {
     background: var(--orange1);
     color: var(--pale);
     border: none;
+    padding: 0.6rem 1.5rem;
+    border-radius: 0;
+    font-size: 0.85rem;
+    font-weight: 500;
+    cursor: pointer;
+    letter-spacing: 0.05em;
+    text-transform: lowercase;
+    transition: all 0.2s;
+    font-family: 'Akzidenz-Grotesk', Helvetica, Arial, sans-serif;
+}
+
+.viewLivePill:hover {
+    background: var(--orange2);
+    transform: translateY(-1px);
 }
 
 .closePill:hover,
@@ -282,11 +296,7 @@ body {
     border-color: var(--pale);
 }
 
-.sharePill:hover,
-.sharePill:focus {
-    background: var(--pale);
-    color: var(--dark1);
-}
+
 
 /* Responsive Breakpoints */
 @media (max-width: 1200px) {

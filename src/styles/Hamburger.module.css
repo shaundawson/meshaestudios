@@ -174,7 +174,7 @@
 /* MISSION BLOCK - Key visual hierarchy */
 .missionBlock {
     padding: var(--gap-medium) 0;
-    border-bottom: 2px solid var(--orange1);
+    /* border-bottom: 2px solid var(--orange1); */
     flex-shrink: 0;
 }
 
@@ -204,7 +204,7 @@
 }
 
 .sectionLabel {
-    color: var(--orange2);
+    color: var(--gray);
     font-size: 0.75rem;
     text-transform: lowercase;
     letter-spacing: 0.12em;
@@ -300,12 +300,12 @@
     opacity: 1;
 }
 
-/* FOOTER - Always visible via scroll */
+/* FOOTER */
 .footerBio {
     margin-top: auto;
-    padding-top: var(--gap-medium);
+    /* padding-top: var(--gap-medium); */
     padding-bottom: var(--gap-small);
-    border-top: 2px solid var(--orange1);
+    /* border-top: 2px solid var(--orange1); */
     color: var(--gray);
     font-size: 0.85rem;
     font-weight: 300;

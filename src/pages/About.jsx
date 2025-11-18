@@ -21,10 +21,9 @@ export default function About() {
                             <div className={styles.characteristicsBlock}>
                                 <span className={styles.characteristicsLabel}> what we do</span>
                                 <div className={styles.characteristics}>
-                                    <span className={styles.tag}>visual storytelling</span>
                                     <span className={styles.tag}>documentary</span>
                                     <span className={styles.tag}>activism</span>
-                                    <span className={styles.tag}>web design and development</span>
+                                    <span className={styles.tag}>web design</span>
                                     <span className={styles.tag}>web series</span>
                                     <span className={styles.tag}>podcast</span>
                                     <span className={styles.tag}>creative direction</span>
@@ -34,7 +33,7 @@ export default function About() {
                         </div>
                         <div className={styles.aboutSideText}>
                             <p>
-                                Led by Shaun Dawson, a Black nonbinary filmmaker and engineer, we believe that craft is a form of respect. Every detail matters because the work matters. Every project gets our full attention, our full skill set, and our full commitment to make something that shifts things.
+                                Led by <a href="https://iamsdawson.com" target="_blank" rel="noopener noreferrer">Shaun Dawson</a>, a Black nonbinary filmmaker and engineer, we believe that craft is a form of respect. Every detail matters because the work matters. Every project gets our full attention, our full skill set, and our full commitment to make something that shifts things.
                             </p>
                         </div>
                     </div>

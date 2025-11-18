@@ -41,6 +41,12 @@ body,
   margin-top: 1vh;
   background: transparent;
   position: absolute;
+  z-index: 100 !important;
+  pointer-events: none;
+}
+
+.App-header * {
+  pointer-events: auto;
 }
 
 .desktopNav {

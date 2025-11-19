@@ -6,7 +6,7 @@ export const pins = [
     //     description: 'Swiss-style editorial layout with heavy type.'
     // },
     {
-        image: 'https://5688825.fs1.hubspotusercontent-na1.net/hubfs/5688825/iamsawson.com/PortfolioLandingPage.png',
+        image: 'https://5688825.fs1.hubspotusercontent-na1.net/hubfs/5688825/iamsawson.com/MinimalLandingPage.png',
         aspect: '16/9', // landscape
         title: ' Modern Portfolio Landing Page',
         description: 'Minimalist landing page template with Swiss design principles. Built with Next.js 14, TypeScript, Tailwind CSS.',

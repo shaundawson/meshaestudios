@@ -53,7 +53,7 @@ const Gallery = () => {
                         </h1>
                         <div className={styles.labDescription}>
                             <p>
-                                The Design Lab showcases our work. Web design. Development. Graphic design. Pitch decks. Everything we create lives here: digital experiences, visual systems, and the work that moves projects forward. Clean design. Strong strategy. Built to work.
+                                The Design Lab showcases our work. Web design. Development. Graphic design. Everything we create lives here: digital experiences, visual systems, and the work that moves projects forward. Clean design. Strong strategy. Built to work.
                             </p>
                         </div>
                     </div>

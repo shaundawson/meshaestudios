@@ -1,6 +1,6 @@
 export const pins = [
     // {
-    //     image: 'https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=600&q=80',
+    //     image: 'https://5688825.fs1.hubspotusercontent-na1.net/hubfs/5688825/iamsawson.com/assignedsex_light.png',
     //     aspect: '4/5', // portrait
     //     title: 'Modernist Type',
     //     description: 'Swiss-style editorial layout with heavy type.'
@@ -11,13 +11,13 @@ export const pins = [
         title: ' Modern Portfolio Landing Page',
         description: 'Minimalist landing page template with Swiss design principles. Built with Next.js 14, TypeScript, Tailwind CSS.',
         website: 'https://www.iamsdawson.com'
+    },
+    {
+        image: 'https://5688825.fs1.hubspotusercontent-na1.net/hubfs/5688825/iamsawson.com/assignedsex_dark.png',
+        aspect: '1/1', // square
+        title: 'Podcast Brand Identity',
+        description: 'Logo design for “Assigned Sex podcast'
     }
-    // {
-    //     image: 'https://images.unsplash.com/photo-1444065381814-865dc9da92c0?auto=format&fit=crop&w=450&q=80',
-    //     aspect: '1/1', // square
-    //     title: 'Monochrome Grid',
-    //     description: 'Gridded portfolio case studies in black and white.'
-    // },
     // {
     //     image: 'https://images.unsplash.com/photo-1487014679447-9f8336841d58?auto=format&fit=crop&w=500&q=80',
     //     aspect: '5/4', // landscape

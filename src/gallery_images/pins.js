@@ -13,13 +13,13 @@ export const pins = [
         website: 'https://www.iamsdawson.com'
     },
     {
-        image: 'https://5688825.fs1.hubspotusercontent-na1.net/hubfs/5688825/iamsawson.com/Assigned%20Sex%20Logo%20-%20Light.png',
+        image: 'https://5688825.fs1.hubspotusercontent-na1.net/hubfs/5688825/iamsawson.com/Assigned%20Sex%20Podcast%20Logo%20-%20Light.png',
         aspect: '1/1', // square
         title: 'Podcast Brand Identity',
         description: 'Logo design for “Assigned Sex" podcast'
     },
     {
-        image: 'https://5688825.fs1.hubspotusercontent-na1.net/hubfs/5688825/iamsawson.com/Badges%20vs%20Shields%20Logo%20-%20Dark.png',
+        image: 'https://5688825.fs1.hubspotusercontent-na1.net/hubfs/5688825/iamsawson.com/Badges%20vs%20Shields%20Podcast%20Logo%20-%20Dark.png',
         aspect: '1/1', // square
         title: 'Podcast Brand Identity',
         description: 'Logo design for “Badges vs Shields" podcast'

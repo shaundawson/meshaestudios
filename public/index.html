@@ -33,6 +33,40 @@
     content="Meshae Studios is a creative studio shaping disruptive, justice-driven narratives through award-winning storytelling and software engineering." />
   <meta name="twitter:image" content="%PUBLIC_URL%/og-image.png" />
 
+  <!-- Structured Data (Schema.org - Organization) -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Meshae Studios",
+      "url": "https://meshaestudios.com",
+      "logo": "https://meshaestudios.com/logo192.png",
+      "description": "Meshae Studios is a creative studio shaping disruptive, justice-driven narratives through award-winning storytelling and software engineering.",
+      "sameAs": [
+        "https://twitter.com/meshaestudios",
+        "https://instagram.com/meshaestudios"
+      ]
+    }
+  </script>
+
+  <!-- Structured Data (Schema.org - WebSite) -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Meshae Studios",
+      "url": "https://meshaestudios.com",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://meshaestudios.com/search?q={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }
+    }
+  </script>
+
   <title>Meshae Studios</title>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-WMEPNGYTRE"></script>

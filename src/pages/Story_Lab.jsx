@@ -59,7 +59,7 @@ export default function Story_Lab() {
                             {/* Header Section */}
                             <div className={styles.headerSection}>
                                 <h2 className={styles.storyLabHeading}>
-                                    <span className={styles.headingNum}>04</span>
+                                    <span className={styles.headingNum}>04</span>{" "}
                                     <span className={styles.headingMain}>story lab</span>
                                 </h2>
                                 <div className={styles.labDescription}>

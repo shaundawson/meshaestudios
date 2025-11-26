@@ -48,7 +48,7 @@ const Gallery = () => {
                 <div className={styles.headerCard}>
                     <div className={styles.headerCardContent}>
                         <h1 className={styles.designLabHeading}>
-                            <span className={styles.headingNum}>03</span>
+                            <span className={styles.headingNum}>03</span>{" "}
                             <span className={styles.headingMain}>design lab</span>
                         </h1>
                         <div className={styles.labDescription}>

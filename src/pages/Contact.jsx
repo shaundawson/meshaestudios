@@ -8,7 +8,7 @@ export default function Contact() {
             <section className={styles.contactBlock}>
                 <div className={styles.headerSection}>
                     <h1 className={styles.contactHeading}>
-                        <span className={styles.headingNum}>05</span>
+                        <span className={styles.headingNum}>05</span>{" "}
                         <span className={styles.headingMain}>let's create something</span>
                     </h1>
                     <p className={styles.contactSubtext}>

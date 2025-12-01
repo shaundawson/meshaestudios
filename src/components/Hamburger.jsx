@@ -42,19 +42,24 @@ export default function Hamburger() {
                             aria-label="Close menu"
                         >×</button>
 
-                        {/* Brand Block */}
-                        <div className={styles.brandBlock}>
-                            <Link to="/" className={styles.brandTitle} style={{ textDecoration: 'none' }} onClick={() => setOpen(false)}>
-                                <span className={styles.meshae}>meshae</span>
-                                <span className={styles.studios}>studios</span>
-                            </Link>
-                        </div>
+                        {/* Brand Block + Mission Block Combined */}
+                        <div className={styles.headerBlock}>
+                            <div className={styles.brandBlock}>
+                                <Link to="/" className={styles.brandTitle} style={{ textDecoration: 'none' }} onClick={() => setOpen(false)}>
+                                    <img
+                                        src="assets/meshae-studios-logo-light.png"
+                                        alt="Meshae Studios Logo"
+                                        style={{ width: '150px', height: 'auto', marginRight: '12px', flexShrink: 0, marginLeft: '-1.5vw' }}
+                                    />
+                                </Link>
+                            </div>
 
-                        {/* Tagline */}
-                        <div className={styles.missionBlock}>
-                            <div className={styles.missionText}>
-                                shaping stories<br />
-                                that <span className={styles.moveBold}>move</span> <span className={styles.cultureBold}>culture.</span>
+                            {/* Tagline */}
+                            <div className={styles.missionBlock}>
+                                <div className={styles.missionText}>
+                                    shaping stories<br />
+                                    that <span className={styles.moveBold}>move</span> <span className={styles.cultureBold}>culture.</span>
+                                </div>
                             </div>
                         </div>
 

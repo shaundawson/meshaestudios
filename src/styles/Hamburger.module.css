@@ -71,7 +71,7 @@
 }
 
 .icon:hover .hamburgerLine {
-    background: var(--orange1);
+    background: var(--orange2);
 }
 
 .icon:hover .lineShort {
@@ -142,22 +142,32 @@
     color: var(--orange1);
 }
 
+/* HEADER BLOCK - Logo + Tagline together */
+.headerBlock {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    padding-bottom: var(--gap-small);
+    flex-shrink: 0;
+    border: none;
+}
+
 /* BRAND BLOCK */
 .brandBlock {
-    padding-bottom: var(--gap-medium);
-    border-bottom: 1px solid rgba(107, 107, 107, 0.2);
     flex-shrink: 0;
+    display: flex;
+    align-items: center;
 }
 
 .brandTitle {
-    font-size: 1.55rem;
-    font-weight: 600;
-    letter-spacing: -0.02em;
-    line-height: 1.1;
-    margin: 0;
     display: flex;
+    align-items: center;
     gap: 0.45rem;
-    padding-top: 2vh;
+}
+
+.brandTextWrapper {
+    display: flex;
+    flex-direction: column;
 }
 
 .meshae {
@@ -166,23 +176,26 @@
 }
 
 .studios {
-    color: var(--orange1);
+    color: var(--orange2);
     font-weight: 300;
     letter-spacing: 0.01em;
 }
 
-/* MISSION BLOCK - Key visual hierarchy */
+/* MISSION BLOCK - Tagline beside logo */
 .missionBlock {
-    padding: var(--gap-medium) 0;
-    /* border-bottom: 2px solid var(--orange1); */
     flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    min-height: 50px;
+    border: none;
+    padding-bottom: 0;
 }
 
 .missionText {
     font-size: 1.08rem;
     font-weight: 300;
     color: var(--gray);
-    line-height: 1.54;
+    line-height: 1.24;
     letter-spacing: 0.008em;
     word-spacing: 0.1em;
 }
@@ -190,7 +203,7 @@
 .moveBold,
 .cultureBold {
     font-weight: 600;
-    color: var(--orange1);
+    color: var(--orange2);
     letter-spacing: -0.01em;
 }
 
@@ -199,8 +212,10 @@
     display: flex;
     flex-direction: column;
     gap: 0.8rem;
-    margin: var(--gap-large) 0 var(--gap-medium) 0;
+    margin: var(--gap-small) 0 var(--gap-small) 0;
     flex-shrink: 0;
+    padding-top: var(--gap-small);
+    padding-bottom: var(--gap-small);
 }
 
 .sectionLabel {
@@ -257,14 +272,14 @@
 
 .menuItem:hover,
 .menuItem:focus {
-    color: var(--orange1);
-    border-left-color: var(--orange1);
+    color: var(--orange2);
+    border-left-color: var(--orange2);
     opacity: 1;
 }
 
 .menuItem:hover .menuNumber {
     opacity: 1;
-    color: var(--orange1);
+    color: var(--orange2);
 }
 
 /* EXTERNAL GROUP */
@@ -295,17 +310,16 @@
 }
 
 .externalLink:hover {
-    color: var(--orange1);
-    border-bottom-color: var(--orange1);
+    color: var(--orange2);
+    border-bottom-color: var(--orange2);
     opacity: 1;
 }
 
 /* FOOTER */
 .footerBio {
     margin-top: auto;
-    /* padding-top: var(--gap-medium); */
+    padding-top: var(--gap-thin);
     padding-bottom: var(--gap-small);
-    /* border-top: 2px solid var(--orange1); */
     color: var(--gray);
     font-size: 0.85rem;
     font-weight: 300;
@@ -412,17 +426,23 @@
         padding: 0.2rem 1.5rem;
     }
 
-    .brandBlock {
+    .headerBlock {
+        display: flex;
+        flex-direction: row;
+        gap: 1.8rem;
+        align-items: center;
         padding-bottom: var(--gap-medium);
     }
 
-    .brandTitle {
-        font-size: 1.8rem;
-        padding-top: 2rem;
+    .brandBlock {
+        flex-shrink: 0;
     }
 
     .missionBlock {
-        padding: var(--gap-medium) 0;
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        min-height: auto;
     }
 
     .missionText {
@@ -432,6 +452,8 @@
 
     .menuSection {
         margin: var(--gap-large) 0 var(--gap-medium) 0;
+        border-top: 1px solid rgba(107, 107, 107, 0.2);
+        padding-top: var(--gap-medium);
     }
 
     .sectionLabel {
@@ -467,7 +489,7 @@
         margin-top: auto;
         padding-top: var(--gap-small);
         padding-bottom: var(--gap-small);
-        border-top: 2px solid var(--orange1);
+        border-top: 1px solid var(--gray);
         font-size: 0.82rem;
         line-height: 1.54;
         width: 100%;
@@ -530,9 +552,22 @@
         margin: 0.3rem 0 1.5rem auto;
     }
 
-    .brandTitle {
-        font-size: 1.5rem;
-        padding-top: 1rem;
+    .headerBlock {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        padding-bottom: var(--gap-medium);
+    }
+
+    .brandBlock {
+        flex-shrink: 0;
+    }
+
+    .missionBlock {
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        min-height: 45px;
     }
 
     .missionText {
@@ -542,6 +577,8 @@
 
     .menuSection {
         margin: var(--gap-large) 0 var(--gap-medium) 0;
+        border-top: 1px solid rgba(107, 107, 107, 0.2);
+        padding-top: var(--gap-medium);
     }
 
     .sectionLabel {
@@ -569,9 +606,9 @@
 
     .footerBio {
         margin-top: auto;
-        padding-top: 0.7rem;
-        padding-bottom: 0.7rem;
-        border-top: 1px solid var(--orange1);
+        padding-top: var(--gap-small);
+        padding-bottom: var(--gap-small);
+        border-top: 1px solid var(--gray);
         font-size: 0.72rem;
         line-height: 1.46;
         width: 100%;
@@ -629,13 +666,22 @@
         margin: 0.2rem 0 1.2rem auto;
     }
 
-    .brandTitle {
-        font-size: 1.3rem;
-        padding-top: 0.8rem;
+    .headerBlock {
+        display: flex;
+        flex-direction: column;
+        gap: 0.8rem;
+        padding-bottom: var(--gap-medium);
+    }
+
+    .brandBlock {
+        flex-shrink: 0;
     }
 
     .missionBlock {
-        padding: var(--gap-medium) 0;
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        min-height: 40px;
     }
 
     .missionText {
@@ -645,6 +691,8 @@
 
     .menuSection {
         margin: var(--gap-large) 0 var(--gap-medium) 0;
+        border-top: 1px solid rgba(107, 107, 107, 0.2);
+        padding-top: var(--gap-medium);
     }
 
     .sectionLabel {
@@ -672,9 +720,9 @@
 
     .footerBio {
         margin-bottom: 13vh;
-        padding-top: 0.6rem;
+        padding-top: var(--gap-thin);
         padding-bottom: 1rem;
-        border-top: 1px solid var(--orange1);
+        border-top: 1px solid var(--gray);
         font-size: 0.8rem;
         line-height: 1.42;
         width: 100%;

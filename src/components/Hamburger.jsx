@@ -100,7 +100,7 @@ export default function Hamburger() {
                         {/* Footer */}
                         <footer className={styles.footerBio}>
                             <div className={styles.footerText}>
-                                meshae studios is a creative studio shaping disruptive, justice-driven narratives through award-winning storytelling and software engineering.
+                                meshae studios is a creative studio shaping disruptive, justice-driven narratives through award-winning storytelling and design.
                             </div>
                         </footer>
                     </aside>

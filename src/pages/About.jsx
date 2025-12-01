@@ -13,27 +13,26 @@ export default function About() {
                     <div className={styles.aboutContentBlock}>
                         <div className={styles.aboutMainText}>
                             <p>
-                                Meshae Studios exists because stories matter. Real stories. The kind that expose what's been hidden and create space for something different to happen. We're filmmakers and engineers and strategists all rolled into one, which means we know how to build narratives that actually reach people and create measurable impact.
+                                Meshae Studios crafts stories that move culture. We're filmmakers and designers who know how to make work that's both beautiful and built to land. We work with people who refuse to settle for surface level.
                             </p>
                             <p>
-                                Here's the thing: if you're doing work that matters, you need people in the room who get both sides. The artistry and the architecture. We work with filmmakers, nonprofits, and founders who refuse to settle for surface level. We help you make work that's thoughtful, rigorous, and designed to land. That's it. That's what we do.
+                                Whether it's a documentary that shifts perspective, a website that reflects your vision, or a campaign with substance, we bring the same rigor to every project. Craft is respect. Every detail matters because the work matters.
                             </p>
                             <div className={styles.characteristicsBlock}>
                                 <span className={styles.characteristicsLabel}> what we do</span>
                                 <div className={styles.characteristics}>
-                                    <span className={styles.tag}>documentary</span>
-                                    <span className={styles.tag}>activism</span>
-                                    <span className={styles.tag}>web design</span>
-                                    <span className={styles.tag}>web series</span>
-                                    <span className={styles.tag}>podcast</span>
+                                    <span className={styles.tag}>film production</span>
+                                    <span className={styles.tag}>web design & development</span>
+                                    <span className={styles.tag}>graphic design</span>
                                     <span className={styles.tag}>creative direction</span>
-                                    <span className={styles.tag}>technical consulting</span>
+                                    <span className={styles.tag}>documentary</span>
+                                    <span className={styles.tag}>strategic storytelling</span>
                                 </div>
                             </div>
                         </div>
                         <div className={styles.aboutSideText}>
                             <p>
-                                Led by <a href="https://iamsdawson.com" target="_blank" rel="noopener noreferrer">Shaun Dawson</a>, a Black nonbinary filmmaker and engineer, we believe that craft is a form of respect. Every detail matters because the work matters. Every project gets our full attention, our full skill set, and our full commitment to make something that shifts things.
+                                Led by <a href="https://www.iamsdawson.com" target="_blank" rel="noopener noreferrer">Shaun Dawson</a>, a filmmaker and front-end developer working at the intersection of race, technology, and social justice.
                             </p>
                         </div>
                     </div>

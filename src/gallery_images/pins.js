@@ -26,7 +26,7 @@ export const pins = [
     },
     {
         image: 'https://5688825.fs1.hubspotusercontent-na1.net/hubfs/5688825/iamsawson.com/Right%20Quick%20Podcast.png',
-        aspect: '5/4', // landscape
+        aspect: '16/9', // landscape
         title: 'Right Quick Podcast',
         description: 'Podcast template with responsive design and grid-based layout. Built with HTML, CSS, and vanilla JavaScript. Features episode management, Patreon CTA, and mobile-optimized navigation.',
         website: 'https://www.rightquickpod.com'

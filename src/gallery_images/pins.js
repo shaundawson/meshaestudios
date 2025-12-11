@@ -23,13 +23,14 @@ export const pins = [
         aspect: '1/1', // square
         title: 'Podcast Brand Identity',
         description: 'Logo design for “Badges vs Shields" podcast'
+    },
+    {
+        image: 'https://5688825.fs1.hubspotusercontent-na1.net/hubfs/5688825/iamsawson.com/Right%20Quick%20Podcast.png',
+        aspect: '5/4', // landscape
+        title: 'Right Quick Podcast',
+        description: 'Podcast template with responsive design and grid-based layout. Built with HTML, CSS, and vanilla JavaScript. Features episode management, Patreon CTA, and mobile-optimized navigation.',
+        website: 'https://www.rightquickpod.com'
     }
-    // {
-    //     image: 'https://images.unsplash.com/photo-1487014679447-9f8336841d58?auto=format&fit=crop&w=500&q=80',
-    //     aspect: '5/4', // landscape
-    //     title: 'Muted Editorial',
-    //     description: 'Magazine layout, warm neutrals, modular type crop.'
-    // },
     // {
     //     image: 'https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=350&q=80',
     //     aspect: '4/6', // portrait
